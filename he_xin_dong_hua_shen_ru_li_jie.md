@@ -36,13 +36,12 @@
 	- Mac OS 中是在左下角，向上和向右为正。
 - 图层的几何
 	- 图层的所有几何属性,包括图层的矩阵变换,都可以隐式 和显式动画。
-	- ![图层的几何](images/图层的几何.png)
-	- `position` 
-	- `bounds`
-	- `frame`
+	- ![](图层的几何.png)
+	- `position` 位置
+	- `bounds` 边界
+	- `frame` 位置和尺寸
 	- `anchorPoint` 从(0,0)到(1,1)，形变属性会绕着这个点运动
 - 几何变换
-	- `CATransform3D`
 	- `CATransform3D` 的数据结构定义一个同质的三维变换(4x4 CGFloat 值的矩阵),用于 图层的旋转,缩放,偏移,歪斜和应用的透视。
 	- `transform` (作用于所有图层)和 `sublayerTransform`（只会作用于子图层）
 	- `CATransform3DIdentity` 是单位矩阵,该矩阵没有缩放、旋转、歪斜、透视。把该 矩阵应用到图层上面,会把图层几何属性修改为默认值。
