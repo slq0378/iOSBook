@@ -49,4 +49,6 @@
     - 图层属性`transform` (作用于所有图层)和 `sublayerTransform`（只会作用于子图层）
 - `CATransform3DIdentity` 是单位矩阵,该矩阵没有缩放、旋转、歪斜、透视。把该 矩阵应用到图层上面,会把图层几何属性修改为默认值。
     - 几个常用方法 
+    - `CATransform3D CATransform3DMakeTranslation ( CGFloat tx, CGFloat ty, CGFloat tz );`
+    - 
 	
