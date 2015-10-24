@@ -54,4 +54,5 @@
     - `CATransform3D CATransform3DMakeRotation ( CGFloat angle, CGFloat x, CGFloat y, CGFloat z );`
     - `CATransform3D CATransform3DScale ( CATransform3D t, CGFloat sx, CGFloat sy, CGFloat sz )`
     - 其中旋转按照弧度计算，不是角度，要自己转换成弧度。
+    - `CATransform3DInvert` 一般是用反转 点内转化对象提供反向转换。
 	
