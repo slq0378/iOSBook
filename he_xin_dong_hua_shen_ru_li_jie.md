@@ -55,4 +55,16 @@
     - `CATransform3D CATransform3DScale ( CATransform3D t, CGFloat sx, CGFloat sy, CGFloat sz )`
     - 其中旋转按照弧度计算，不是角度，要自己转换成弧度。
     - `CATransform3DInvert` 一般是用反转 点内转化对象提供反向转换。
-	
+- 数据结构
+
+```
+struct CATransform3D
+{
+  CGFloat m11, m12, m13, m14;
+  CGFloat m21, m22, m23, m24;
+  CGFloat m31, m32, m33, m34;
+  CGFloat m41, m42, m43, m44;
+};
+typedef struct CATransform3D CATransform3D;
+```
+
