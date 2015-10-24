@@ -46,7 +46,7 @@
 ### 几何变换
 
 - `CATransform3D` 的数据结构定义一个同质的三维变换(4x4 CGFloat 值的矩阵),用于 图层的旋转,缩放,偏移,歪斜和应用的透视。
-- `transform` (作用于所有图层)和 `sublayerTransform`（只会作用于子图层）
+    - 图层属性`transform` (作用于所有图层)和 `sublayerTransform`（只会作用于子图层）
 - `CATransform3DIdentity` 是单位矩阵,该矩阵没有缩放、旋转、歪斜、透视。把该 矩阵应用到图层上面,会把图层几何属性修改为默认值。
 - 
 	
