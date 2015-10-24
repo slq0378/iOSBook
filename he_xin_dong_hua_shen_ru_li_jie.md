@@ -50,5 +50,7 @@
 - `CATransform3DIdentity` 是单位矩阵,该矩阵没有缩放、旋转、歪斜、透视。把该 矩阵应用到图层上面,会把图层几何属性修改为默认值。
     - 几个常用方法 
     - `CATransform3D CATransform3DMakeTranslation ( CGFloat tx, CGFloat ty, CGFloat tz );`
-    - 
+    - `CATransform3D CATransform3DMakeScale ( CGFloat sx, CGFloat sy, CGFloat sz );`
+    - `CATransform3D CATransform3DMakeRotation ( CGFloat angle, CGFloat x, CGFloat y, CGFloat z );
+`
 	
