@@ -51,6 +51,6 @@
     - 几个常用方法 
     - `CATransform3D CATransform3DMakeTranslation ( CGFloat tx, CGFloat ty, CGFloat tz );`
     - `CATransform3D CATransform3DMakeScale ( CGFloat sx, CGFloat sy, CGFloat sz );`
-    - `CATransform3D CATransform3DMakeRotation ( CGFloat angle, CGFloat x, CGFloat y, CGFloat z );
+    - `CATransform3D CATransform3DMakeRotation ( CGFloat angle, CGFloat x, CGFloat y, CGFloat z );`
 `
 	
