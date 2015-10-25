@@ -200,7 +200,7 @@ NS_ASSUME_NONNULL_END
 
 - 通过KVC修改动画属性
     - 核心动画扩展了键-值编码协议,允许通过关键路径获取和设置一个图层的 CATransform3D 矩阵的值。
--
+    - `[self.layer setValue:[NSNumber numberWithInt:1] forKeyPath:@"transform.rotation.x"];`
 
 
 
