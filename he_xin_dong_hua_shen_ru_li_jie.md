@@ -201,12 +201,12 @@ NS_ASSUME_NONNULL_END
 - 通过KVC修改动画属性
     - 核心动画扩展了键-值编码协议,允许通过关键路径获取和设置一个图层的 CATransform3D 矩阵的值。
     - `[self.layer setValue:[NSNumber numberWithInt:1] forKeyPath:@"transform.rotation.x"];`
-    - 可以通过setvalue: forkeypath 或者valueforkeypath来设置动画的属性。
+    - 可以通过`setvalue: forkeypath` 或者 `valueforkeypath` 来设置动画的属性。
 
 ## 图层树
-- 图层拥有类似UIView的层次结构，拥有父视图（superview）和子视图（subview），CALayer拥有父图层（superlayer）和子图层（sublayer）。
-- 图层的显示必须依赖window窗口的显示，也就是必须把一个图层托管给一个UIView。当视图和图层一起的时候,视图为图层提供了底层的事件处理,而图层为视图 提供了显示的内容。
-- iOS 上面的视图系统直接建立在核心动画的图层上面。每个 UIView 的实例会自 动的创建一个 CALayer 类的实例,然后把该实例赋值给视图的 layer 属性。你可以在 需要的时候向视图的图层里面添加子图层。
+- 图层拥有类似UIView的层次结构，拥有父视图（superview）和子视图（subview），`CALayer`拥有父图层（superlayer）和子图层（sublayer）。
+- 图层的显示必须依赖window窗口的显示，也就是必须把一个图层托管给一个`UIView`。当视图和图层一起的时候,视图为图层提供了底层的事件处理,而图层为视图 提供了显示的内容。
+- iOS 上面的视图系统直接建立在核心动画的图层上面。每个 UIView 的实例会自 动的创建一个 `CALayer` 类的实例,然后把该实例赋值给视图的 `layer` 属性。你可以在 需要的时候向视图的图层里面添加子图层。
 - 
 
 
