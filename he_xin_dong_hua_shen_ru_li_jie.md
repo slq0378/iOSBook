@@ -204,7 +204,8 @@ NS_ASSUME_NONNULL_END
     - 可以通过setvalue: forkeypath 或者valueforkeypath来设置动画的属性。
 
 ## 图层树
-- 图层拥有类似UIView的层次结构，拥有父视图（superview）和子视图（subview），
+- 图层拥有类似UIView的层次结构，拥有父视图（superview）和子视图（subview），CALayer拥有父图层（superlayer）和子图层（sublayer）。
+- 图层的显示必须依赖window窗口的显示，也就是必须把一个图层托管给一个UIView。当视图和图层一起的时候,视图为图层提供了底层的事件处理,而图层为视图 提供了显示的内容。
 
 
 
