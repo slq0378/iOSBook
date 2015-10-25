@@ -203,5 +203,8 @@ NS_ASSUME_NONNULL_END
     - `[self.layer setValue:[NSNumber numberWithInt:1] forKeyPath:@"transform.rotation.x"];`
     - 可以通过setvalue: forkeypath 或者valueforkeypath来设置动画的属性。
 
+## 图层树
+
+
 
 
