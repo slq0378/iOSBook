@@ -213,7 +213,8 @@ NS_ASSUME_NONNULL_END
     - `￼removeFromSuperlayer`
     - `replaceSublayer:with:`
 - 基本属性
-
+    - 这些属性的修改基本上都会产生动画。 
+    
 ```
 /** Geometry and layer hierarchy properties. **/
 
@@ -248,4 +249,4 @@ NS_ASSUME_NONNULL_END
 
 @property CATransform3D transform;
 ```
-
+- 自动调整图层大小
