@@ -206,6 +206,7 @@ NS_ASSUME_NONNULL_END
 ## 图层树
 - 图层拥有类似UIView的层次结构，拥有父视图（superview）和子视图（subview），CALayer拥有父图层（superlayer）和子图层（sublayer）。
 - 图层的显示必须依赖window窗口的显示，也就是必须把一个图层托管给一个UIView。当视图和图层一起的时候,视图为图层提供了底层的事件处理,而图层为视图 提供了显示的内容。
-
+- iOS 上面的视图系统直接建立在核心动画的图层上面。每个 UIView 的实例会自 动的创建一个 CALayer 类的实例,然后把该实例赋值给视图的 layer 属性。你可以在 需要的时候向视图的图层里面添加子图层。
+- 
 
 
