@@ -207,6 +207,45 @@ NS_ASSUME_NONNULL_END
 - 图层拥有类似UIView的层次结构，拥有父视图（superview）和子视图（subview），`CALayer`拥有父图层（superlayer）和子图层（sublayer）。
 - 图层的显示必须依赖window窗口的显示，也就是必须把一个图层托管给一个`UIView`。当视图和图层一起的时候,视图为图层提供了底层的事件处理,而图层为视图 提供了显示的内容。
 - iOS 上面的视图系统直接建立在核心动画的图层上面。每个 UIView 的实例会自 动的创建一个 `CALayer` 类的实例,然后把该实例赋值给视图的 `layer` 属性。你可以在 需要的时候向视图的图层里面添加子图层。
-- 
+- 初始化一个图层并添加到图层树
+    - `addSublayer:`
+    - `insertSublayer:atIndex:`
+    - `￼removeFromSuperlayer`
+    - `replaceSublayer:with:`
+- 基本属性
 
+```
+/** Geometry and layer hierarchy properties. **/
+
+/* The bounds of the layer. Defaults to CGRectZero. Animatable. */
+
+@property CGRect bounds;
+
+/* The position in the superlayer that the anchor point of the layer's
+ * bounds rect is aligned to. Defaults to the zero point. Animatable. */
+
+@property CGPoint position;
+
+/* The Z component of the layer's position in its superlayer. Defaults
+ * to zero. Animatable. */
+
+@property CGFloat zPosition;
+
+/* Defines the anchor point of the layer's bounds rect, as a point in
+ * normalized layer coordinates - '(0, 0)' is the bottom left corner of
+ * the bounds rect, '(1, 1)' is the top right corner. Defaults to
+ * '(0.5, 0.5)', i.e. the center of the bounds rect. Animatable. */
+
+@property CGPoint anchorPoint;
+
+/* The Z component of the layer's anchor point (i.e. reference point for
+ * position and transform). Defaults to zero. Animatable. */
+
+@property CGFloat anchorPointZ;
+
+/* A transform applied to the layer relative to the anchor point of its
+ * bounds rect. Defaults to the identity transform. Animatable. */
+
+@property CATransform3D transform;
+```
 
