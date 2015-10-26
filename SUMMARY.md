@@ -7,7 +7,7 @@
    * [UIButton](uibutton.md)
 * 多媒体相关
    * [后台播放音频](hou_tai_bo_fang_yin_pin.md)
-   * 音频
+   * [音频](yin_pin.md)
 * [UI](ui.md)
    * [js和oc互相调用](jshe_oc_hu_xiang_diao_yong.md)
    * [介绍](jie_shao.md)
