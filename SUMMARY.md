@@ -21,6 +21,7 @@
    * [格式化时间显示](ge_shi_hua_shi_jian_xian_shi.md)
    * [杂项总结](za_xiang_zong_jie.md)
    * [UIDynamic物理引擎](uidynamicwu_li_yin_qing.md)
+   * 核心动画
 * 网络和多线程
    * [网络](wang_luo.md)
    * [多线程](duo_xian_cheng.md)
