@@ -94,7 +94,7 @@ menu.menuItems = @[ding, replay, report];
 ```
 ## 在tableView控制器的cell中显示
 
-![](../images/屏幕快照 2015-08-07 16.37.14.png)
+![](/images/屏幕快照 2015-08-07 16.37.14.png)
 
 - 首先在选中cell时做出反应
 ```objc
