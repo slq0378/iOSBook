@@ -3,7 +3,7 @@
 
 ## 真机调试
 
-![](../images/屏幕快照 2015-08-13 09.05.55.png)
+![](/images/屏幕快照 2015-08-13 09.05.55.png)
 - 证书
 	- 1. iOS dev
 	- 2. 创建CSR，证书请求文件
@@ -16,7 +16,7 @@
 
 ## 发布程序
 
-![](../images/Snip20150813_10.png)
+![](/images/Snip20150813_10.png)
 
 - LaunchScreen.xib
 	- 自动进行屏幕适配
@@ -145,7 +145,7 @@
 
 ## 应用间跳转
 
-![](../images/应用间跳转URL的添加方式.gif)
+![](/images/应用间跳转URL的添加方式.gif)
 
 - 先跳转到其他应用，操作完成后再跳转回来。
 - 通过URL打开其他应用
@@ -164,7 +164,7 @@
     }
 ```
 
-![](../images/Snip20150813_12.png)
+![](/images/Snip20150813_12.png)
 
 - 跳转回去
 	- 在跳转之前将自己URL包装起来，传递到下一个应用，然后由下一个应用获取并跳转回来
@@ -267,14 +267,14 @@
 - iOS自带：Social.framework
 - 前提是在iOS系统中配置一下账号
 
-![](../images/Snip20150813_17.png)
+![](/images/Snip20150813_17.png)
 
 - 可以直接添加一些文字、图片、URL等
 
-![](../images/Snip20150813_21.png)
+![](/images/Snip20150813_21.png)
 
 - 如果想监听按键的状态
-![](../images/Snip20150813_24.png)
+![](/images/Snip20150813_24.png)
 
 
 ```objc
@@ -347,7 +347,7 @@
 }
 ```
 - 登陆界面，也可以自定义界面
-![](../images/Snip20150813_41.png)
+![](/images/Snip20150813_41.png)
 
 -  授权
 	- oaauth 2.0 - 弹出一个webView
@@ -358,9 +358,9 @@
 ### 推送通知
 
 - 本地推送通知
-![](../images/Snip20150814_45.png)
+![](/images/Snip20150814_45.png)
 
-![](../images/Snip20150813_28.png)
+![](/images/Snip20150813_28.png)
 
 - iOS8需要进行注册
 ```objc
@@ -371,22 +371,22 @@
         [application registerUserNotificationSettings:settings];
     }
 ```
-![](../images/Snip20150813_31.png)
+![](/images/Snip20150813_31.png)
 
-![](../images/Snip20150814_43.png)
+![](/images/Snip20150814_43.png)
 
-![](../images/Snip20150814_42.png)
+![](/images/Snip20150814_42.png)
 
 - 第一次运行程序时会弹出提醒用户是否接收通知
 
-![](../images/Snip20150813_27.png)
+![](/images/Snip20150813_27.png)
 
 - iOS7会自己弹出
 - alertView
 
-![](../images/Snip20150813_29.png)
+![](/images/Snip20150813_29.png)
 - 其他属性
-![](../images/Snip20150813_32.png)
+![](/images/Snip20150813_32.png)
 
 ```objc
     // 1.创建本地通知
@@ -444,7 +444,7 @@
 }
 ```
 
-![](../images/Snip20150814_44.png)
+![](/images/Snip20150814_44.png)
 
 - 在应用程序不死的情况话，在前台或者由后台进入前台都会进入这个方法
 
@@ -473,7 +473,7 @@
 - APNs
 - deviceToken：获取必须有开发者账号，这个暂时没法测试了
 
-![](../images/Snip20150814_46.png)
+![](/images/Snip20150814_46.png)
 
 `格式:{"aps":{"alert":"This is some fancy message.","badge":1,"sound":"default"}}`
 
@@ -488,7 +488,7 @@
     [application registerForRemoteNotificationTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound];
 ```
 
-![](../images/Snip20150813_35.png)
+![](/images/Snip20150813_35.png)
 
 - 当得到苹果的APNs服务器返回的DeviceToken就会被调用
 
@@ -504,7 +504,7 @@
 
 - 使用后台的远程消息推送
 
-![](../images/Snip20150813_40.png)
+![](/images/Snip20150813_40.png)
 
 ```objc
 1>	在Capabilities中打开远程推送通知
