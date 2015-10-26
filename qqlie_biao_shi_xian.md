@@ -227,7 +227,7 @@
 }
 ```
 
-![](../images/Simulator Screen Shot 2015年9月8日 23.01.12.png)
+![](/images/Simulator Screen Shot 2015年9月8日 23.01.12.png)
 
 ## 5、自定义HeaderFooterView
 
@@ -397,4 +397,4 @@
 ```
 
 
-![](../images/Simulator Screen Shot 2015年9月8日 23.18.14.png)
+![](/images/Simulator Screen Shot 2015年9月8日 23.18.14.png)
