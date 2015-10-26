@@ -46,11 +46,11 @@ setting[AVEncoderAudioQualityKey] = [NSNumber numberWithInt:AVAudioQualityHigh];
 
 - 可以使用懒加载
 
-![](../images/Snip20150815_54.png)
+![](/images/Snip20150815_54.png)
 
 - 通过字典实现多个文件的加载
 
-![](../images/Snip20150815_55.png)
+![](/images/Snip20150815_55.png)
 
 - 封装成工具类
 
@@ -150,13 +150,13 @@ static NSMutableDictionary *_players;
 
 - `AVAudioPlayer`
 
-![](../images/Snip20150815_57.png)
+![](/images/Snip20150815_57.png)
 
 - 默认每一个url对应一个`AVAudioPlayer`对象，所以可以通过字典比较好（工具类封装）
 
 ## 毛玻璃效果实现
 
-![](../images/Snip20150815_58.png)
+![](/images/Snip20150815_58.png)
 
 - UIToolBar实现代码
 
@@ -178,7 +178,7 @@ static NSMutableDictionary *_players;
 - 主界面搭建
 - storyboard 添加手势
 
-![](../images/storyboard添加手势.gif)
+![](/images/storyboard添加手势.gif)
 
 - `translatesAutoresizingMaskIntoConstraints`设置
 
@@ -188,9 +188,9 @@ static NSMutableDictionary *_players;
 
 - 后台播放
 
-![](../images/Snip20150819_9_1.png)
+![](/images/Snip20150819_9_1.png)
 
-![](../images/屏幕快照 2015-08-17 15.37.26.png)
+![](/images/屏幕快照 2015-08-17 15.37.26.png)
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -209,8 +209,8 @@ static NSMutableDictionary *_players;
 
 - `MONowPlayingInfoCenter`
 
-![](../images/Snip20150817_1.png)
-![](../images/Snip20150817_2.png)
+![](/images/Snip20150817_1.png)
+![](/images/Snip20150817_2.png)
 
 - 锁屏事件中心
 
@@ -262,7 +262,7 @@ static NSMutableDictionary *_players;
 
 - 监听事件
 
-![](../images/Snip20150817_3.png)
+![](/images/Snip20150817_3.png)
 
 - 锁屏歌词（图片）
 
@@ -508,7 +508,7 @@ static NSMutableDictionary *_players;
 
 
 - 多个文件一个`playWithPlayerItem:`
-![](../images/Snip20150817_4.png)
+![](/images/Snip20150817_4.png)
 
 - `MPMoviePlayerViewController`控制器
 
@@ -530,7 +530,7 @@ static NSMutableDictionary *_players;
     [self presentViewController:self.playerVc animated:YES completion:nil];
 }
 ```
-![](../images/MPMoviePlayerViewController使用.gif)
+![](/images/MPMoviePlayerViewController使用.gif)
 
 - `MPMoviePlayerController`控制器
 
@@ -558,7 +558,7 @@ static NSMutableDictionary *_players;
 }
 ```
 
-![](../images/MPMoviePlayerController的使用.gif)
+![](/images/MPMoviePlayerController的使用.gif)
 ## 总结
 ### 一、音频播放
 - 1.音效播放（短时间的音频文件）
