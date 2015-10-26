@@ -10,9 +10,9 @@
 ## 沙盒
 - 每个iOS应用都有自己的应用沙盒(应用沙盒就是文件系统目录)，与其他文件系统隔离。应用必须待在自己的沙盒里，其他应用不能访问该沙盒。沙盒的结构如下所示：
 
-![](../images/屏幕快照 2015-06-13 19.05.06.png)
+![](/images/屏幕快照 2015-06-13 19.05.06.png)
 
-![](../images/屏幕快照 2015-06-13 19.08.29.png)
+![](/images/屏幕快照 2015-06-13 19.08.29.png)
 
 - 分类
     - 应用程序包：(上图中的QQ.app)包含了所有的资源文件和可执行文件。
@@ -76,9 +76,9 @@ NSString *path2 =NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory,
             [dict writeToFile:filePath atomically:YES];
 ```
 
-![](../images/屏幕快照 2015-06-13 19.49.39.png)
+![](/images/屏幕快照 2015-06-13 19.49.39.png)
 
-![](../images/屏幕快照 2015-06-13 19.49.57.png)
+![](/images/屏幕快照 2015-06-13 19.49.57.png)
 
 
 - 读取数据
@@ -304,10 +304,3 @@ NSString *path2 =NSSearchPathForDirectoriesInDomains(NSPreferencePanesDirectory,
     }
 ```
 
-- 还有两种存储方式，属于数据库范畴，继续学习。
-
-
-
-
-
-http://www.cnblogs.com/songliquan/
