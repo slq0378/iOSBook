@@ -420,4 +420,4 @@ UIGestureRecognizer是一个抽象类，定义了所有手势的基本行为，�
 #define keyPath(obj,keyPath) @(((void)obj.keyPath,#keyPath))
 ```
 
-http://www.cnblogs.com/songliquan/
+
