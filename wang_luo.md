@@ -522,7 +522,7 @@ parser.delegate = self; // 2 设置代理
 	`NSData *data = [NSData dataWithContentsOfURL:url];`
 - 使用NSURLConnection 异步连接
 ```objc
-    NSURL *url  = [NSURL URLWithString:@"http://123.123.123.123/resources/../images/minion_13.png"];
+    NSURL *url  = [NSURL URLWithString:@"http://123.123.123.123/resources//images/minion_13.png"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         NSLog(@"---%zd---",data.length);
@@ -625,7 +625,7 @@ parser.delegate = self; // 2 设置代理
 
 ## 文件上传
 
-![](../images/MIMEType.png)
+![](/images/MIMEType.png)
 
 
 
@@ -788,7 +788,7 @@ parser.delegate = self; // 2 设置代理
 
 ```objc
 // 建立连接
-NSURL *url  = [NSURL URLWithString:@"http://123.123.123.123/resources/../images/minion_05.png"];
+NSURL *url  = [NSURL URLWithString:@"http://123.123.123.123/resources//images/minion_05.png"];
 NSURLConnection *con = [NSURLConnection connectionWithRequest:[NSURLRequest requestWithURL:url] delegate:self];
 // 决定代理方法在哪个队列中执行
 [con setDelegateQueue:[[NSOperationQueue alloc] init]];
@@ -1081,7 +1081,7 @@ typedef NS_ENUM(NSInteger, NSURLSessionResponseDisposition) {
     // 下载
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
 
-    [[mgr downloadTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://123.123.123.123/resources/../images/minion_02.png"]] progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+    [[mgr downloadTaskWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://123.123.123.123/resources//images/minion_02.png"]] progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
         // 下载文件需要返回一个保存路径，还需要手动启动resume
         NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
         return [NSURL fileURLWithPath:[path stringByAppendingPathComponent:response.suggestedFilename]];
@@ -1104,7 +1104,7 @@ typedef NS_ENUM(NSInteger, NSURLSessionResponseDisposition) {
     // 告诉AFN，以XML形式解析服务器返回的数据
     //    mgr.responseSerializer = [AFXMLParserResponseSerializer serializer];
     // 将数据作为参数传入
-    [mgr GET:[NSString stringWithFormat:@"http://123.123.123.123/resources/../images/minion_02.png"] parameters:nil success:^(NSURLSessionDataTask *task,id response) {
+    [mgr GET:[NSString stringWithFormat:@"http://123.123.123.123/resources//images/minion_02.png"] parameters:nil success:^(NSURLSessionDataTask *task,id response) {
         NSLog(@"success:%zd",[response length]);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"failure:%@",error);
@@ -1441,7 +1441,7 @@ void handleException(NSException *exception)
 
 - 如果对于某些警告需要屏蔽，需要找到这个警告 的代号
 
-![](../images/查找警告对应的代号.gif)
+![](/images/查找警告对应的代号.gif)
 
 ```objc
  // 去除Xcode编译警告
