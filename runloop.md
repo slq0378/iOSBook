@@ -44,7 +44,7 @@ int main(int argc, char * argv[]) {
 - 类之间的关系
 	- 每次启动程序都会指定一个Mode，如果要切换Mode，只退出Loop，再进入新mode
 
-![](../images/RunLoop.png)
+![](/images/RunLoop.png)
 
 ### CFRunLoopModeRef
 - 系统默认注册了5个mode
@@ -122,10 +122,10 @@ CFRunLoopActivity activity)// block ,状态触发后进入这个block
 ## RunLoop逻辑
 - RunLoop逻辑官方版
 
-![](../images/RunLoop官方版.png)
+![](/images/RunLoop官方版.png)
 - RunLoop逻辑
 
-![](../images/RunLoop处理逻辑.png)
+![](/images/RunLoop处理逻辑.png)
 
 ## 常驻线程
 - 如果想在程序启动后保持一个线程处于后台处理各种事件，那么可以使用常驻线程。
