@@ -30,7 +30,7 @@
     - 自定义一个类继承自UITabBar
     - 实现initWithFrame和layoutSubviews方法即可。
 
-![](../images/屏幕快照 2015-07-22 21.00.27.png)
+![](/images/屏幕快照 2015-07-22 21.00.27.png)
 
 # 自定义UIView工具类
 - 因为要经常获取控件的frame、height等属性进行设置，这里对UIView写一个分类，添加一些自定义的setter和getter方法
@@ -41,7 +41,7 @@
 
 ## 设置所有的子控制器的返回按钮样式一致
 
-![](../images/屏幕快照 2015-07-22 23.53.38.png)
+![](/images/屏幕快照 2015-07-22 23.53.38.png)
 
 ```objc
 //#import "SLQNavigationController.h"
@@ -323,7 +323,7 @@ typedef NS_ENUM(NSInteger, UIStatusBarStyle) {
 	- cell frame
 - 图片
 
-![](../images/屏幕快照 2015-07-29 11.30.36.png)
+![](/images/屏幕快照 2015-07-29 11.30.36.png)
 
 - 图片下载进度
 	- 各种细节
@@ -349,7 +349,7 @@ typedef NS_ENUM(NSInteger, UIStatusBarStyle) {
 	- 5.pop的动画实时修改对象的属性, 真正地修改了对象的属性
 
 
-![](../images/屏幕快照 2015-07-30 09.17.26.png)
+![](/images/屏幕快照 2015-07-30 09.17.26.png)
 
 - 弹出控制器
 
@@ -362,7 +362,7 @@ typedef NS_ENUM(NSInteger, UIStatusBarStyle) {
 
 
 	- 版本号
-	![](../images/屏幕快照 2015-07-30 14.45.59.png)
+	![](/images/屏幕快照 2015-07-30 14.45.59.png)
 - 框架细则
 	- 把项目文件和资源文件放到和项目同名的文件夹中
 	- 把图片资源打包到bundle中，直接把文件夹后缀名改为.bundle即可，访问图片时添加bundle名称
@@ -489,7 +489,7 @@ static NSString *ID = @"header";
 
 - 添加过自定义winow后，登录界面状态栏显示有问题：不是白色
 	- 方法1：改变状态栏控制器方式：关闭控制器管理状态栏，直接使用UIApplication 管理状态栏(info.list里设置)
-	![](../images/屏幕快照 2015-08-05 23.39.01.png)
+	![](/images/屏幕快照 2015-08-05 23.39.01.png)
 
 	- 方法2：在登录界面隐藏window，退出登录时再显示
 ```objc
