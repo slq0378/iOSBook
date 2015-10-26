@@ -1,6 +1,6 @@
 # UIMenuController的示例
 
-![](../images/屏幕快照 2015-08-07 13.49.31.png)
+![](/images/屏幕快照 2015-08-07 13.49.31.png)
 
 
 ## UIMenuController须知
