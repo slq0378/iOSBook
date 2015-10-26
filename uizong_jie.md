@@ -293,7 +293,7 @@ if(count % 3)
 
 pch文件中包含的东西在项目中每个文件中都可以使用。
 
-![](../images/手动添加pch文件到项目.gif)
+![](/images/手动添加pch文件到项目.gif)
 
 ## 8、load和initialize
 
@@ -363,18 +363,18 @@ pch文件中包含的东西在项目中每个文件中都可以使用。
 
 - View的生命周期
 
-![](../images/view的生命周期.jpg)
+![](/images/view的生命周期.jpg)
 
 ## 11、UINavigationBar
 
 - 所生成的图片都是经过处理的view，为蓝色
 
-![](../images/屏幕快照 2015-06-30 15.14.26.png)
+![](/images/屏幕快照 2015-06-30 15.14.26.png)
 
 
 - 原始图片
 
-![](../images/屏幕快照 2015-06-30 15.14.40.png)
+![](/images/屏幕快照 2015-06-30 15.14.40.png)
 
 ```objc
 // 默认左右两遍的view都是蓝色的，所以要返回一个原始的图片
@@ -387,7 +387,7 @@ self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:i
 
 ## 12、九宫格布局`UICollectionViewController`
 
-![](../images/九宫格分析.jpg)
+![](/images/九宫格分析.jpg)
 
 - 创建控制器一定要指定默认的布局样式。
 
@@ -751,7 +751,7 @@ SLQHtmlItem *item  = [SLQHtmlItem objectWithDict:dict mapDict:@{@"ID":@"id"}];
 
 ## 19、窗口悬停
 
-![](../images/窗口悬停.gif)
+![](/images/窗口悬停.gif)
 
 ### 不使用自动布局,使用frame
 - 添加几个子控件（UIScrollView ->UIImageView，UIView）,直接设置frame确定尺寸
