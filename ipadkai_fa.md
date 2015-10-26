@@ -6,15 +6,15 @@
 - iPad特有API
 	- UIPopoverCpntroller
 
-![](../images/屏幕快照 2015-08-09 09.11.29.png)
+![](/images/屏幕快照 2015-08-09 09.11.29.png)
 	- UISplitViewController
 
-![](../images/屏幕快照 2015-08-09 09.12.26.png)
+![](/images/屏幕快照 2015-08-09 09.12.26.png)
 
 - 共有API差异
 	- UIActionSheet
 
-![](../images/屏幕快照 2015-08-09 09.14.03.png)
+![](/images/屏幕快照 2015-08-09 09.14.03.png)
 
 - UIButon 中image和title调整
  `-(void)imageRectForContentRect:(CGRect)contentRect;`
