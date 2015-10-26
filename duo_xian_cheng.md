@@ -1041,7 +1041,7 @@ SLQInstanceImplementation(Person)
     }];
     NSBlockOperation *downloadImage2 = [NSBlockOperation blockOperationWithBlock:^{
         // 下载图片2
-        NSURL *url = [NSURL URLWithString:@"http://img.pconline.com.cn/../images/upload/upc/tx/photoblog/1403/29/c2/32592531_32592531_1396084944389_mthumb.jpg"];
+        NSURL *url = [NSURL URLWithString:@"http://img.pconline.com.cn//images/upload/upc/tx/photoblog/1403/29/c2/32592531_32592531_1396084944389_mthumb.jpg"];
 
         NSData *data = [NSData dataWithContentsOfURL:url];
 
@@ -1097,7 +1097,7 @@ SLQInstanceImplementation(Person)
     // 最后从网络下载
 
     // 从内存中读取数据
-    UIImage *imageMemeory = self.../images[item.icon];
+    UIImage *imageMemeory = self./images[item.icon];
 
     if (imageMemeory) { // 如果内存中有
         cell.imageView.image = imageMemeory;
@@ -1115,7 +1115,7 @@ SLQInstanceImplementation(Person)
 
         if (imageCache) { // 如果沙盒中图片存在
             // 加载到内存
-            self.../images[item.icon] = imageCache;
+            self./images[item.icon] = imageCache;
             // 显示图片
             cell.imageView.image = imageCache;
         }
@@ -1151,7 +1151,7 @@ SLQInstanceImplementation(Person)
                         }];
 
                         // 保存数据内存
-                        self.../images[item.icon] = imageDownload;
+                        self./images[item.icon] = imageDownload;
                         // 保存数据到沙盒
                         [data writeToFile:filePath atomically:YES];
                         // 移除下载任务
