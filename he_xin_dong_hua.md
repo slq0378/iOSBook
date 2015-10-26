@@ -30,7 +30,7 @@
     _redView.layer.borderColor = [UIColor yellowColor].CGColor;
 ```
 
-  ![](../images/屏幕快照 2015-06-23 13.14.04.png)
+  ![](/images/屏幕快照 2015-06-23 13.14.04.png)
 
 ## UIImageView图层
 
@@ -48,7 +48,7 @@
         _imageView.layer.masksToBounds = YES;
 ```
 
-  ![](../images/屏幕快照 2015-06-23 14.28.13.png)
+  ![](/images/屏幕快照 2015-06-23 14.28.13.png)
 
 ## CALayer注意事项
 
@@ -133,7 +133,7 @@
 
 ## 简单钟表实现
 
-  ![](../images/屏幕快照 2015-06-23 22.15.34.png)
+  ![](/images/屏幕快照 2015-06-23 22.15.34.png)
 
 ### 绘制秒针、时针、分针
 
@@ -356,7 +356,7 @@
     }
 ```
 
-  ![](../images/屏幕快照 2015-06-23 23.34.11.png)
+  ![](/images/屏幕快照 2015-06-23 23.34.11.png)
 
 ## 动画组：CAAnimationGroup
 
@@ -396,7 +396,7 @@
 
 ## 渐变图层 - CAGradientLayer
 
-  ![](../images/图片折叠.gif)
+  ![](/images/图片折叠.gif)
 
 
 - 实现这种效果需要将一张图片拆分成两张，直接使用两个imageView
@@ -467,7 +467,7 @@
 
 ### 音量振动条
 
-![](../images/音量振动条.gif)
+![](/images/音量振动条.gif)
 
 ```objc
     - (void)createLayerWithColor:(UIColor *)color anchorPoint:(CGPoint )point frame:(CGRect)rect
@@ -540,7 +540,7 @@
 
 - 使用关键帧动画可以实现跟随粒子效果
 
-![](../images/粒子效果.gif)
+![](/images/粒子效果.gif)
 
 ```objc
     #import "DrawView.h"
@@ -660,7 +660,7 @@
 
 ### 倒影
 
-![](../images/倒影效果.gif)
+![](/images/倒影效果.gif)
 
 - 通过复制图层复制多个照片图层，然后设置属性。
 
