@@ -1,7 +1,7 @@
 
 # 手势识别
 
- ![](../images/手势识别效果.gif)
+ ![](/images/手势识别效果.gif)
 
 ## UIGestureRecognizer
 
