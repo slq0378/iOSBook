@@ -50,5 +50,5 @@
    * [二维码](er_wei_ma.md)
    * [通讯录](tong_xun_lu.md)
    * [iPad开发](ipadkai_fa.md)
-   * 表情键盘
+   * [表情键盘](biao_qing_jian_pan.md)
 
