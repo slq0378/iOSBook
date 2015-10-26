@@ -11,9 +11,9 @@
 
 - 其中UILable比较特殊，它只需指定位置和宽度，高度系统会根据文字长度自动计算。
 - 可以参看下面程序。
-![](../images/autolayout01.png)
+![](/images/autolayout01.png)
 
-![](../images/autolayout02.png)
+![](/images/autolayout02.png)
 
 
 
