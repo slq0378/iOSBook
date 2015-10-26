@@ -934,6 +934,3 @@ NSLog(@"%p--%p--%d",&numbers[1],&numbers[1] + 1,**(&numbers[1]+ 2));
 
 
 
-http://www.cnblogs.com/songliquan/
-
-
