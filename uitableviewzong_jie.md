@@ -100,10 +100,10 @@ NSString *ID = @"cell";
 ## tableView性能优化 - cell的循环利用方式3
 
 - 在storyboard中设置UITableView的Dynamic Prototypes Cell
-![](../images/Snip20150602_152.png)
+![](/images/Snip20150602_152.png)
 
 - 设置cell的重用标识
-![](../images/Snip20150602_153.png)
+![](/images/Snip20150602_153.png)
 
 - 在代码中利用重用标识获取cell
 
@@ -122,7 +122,7 @@ return cell;
 ```
 ## 错误将UIViewController当做UITableViewController来用
 
-![](../images/Snip20150602_110.png)
+![](/images/Snip20150602_110.png)
 
 ## UITableView的常见设置
 
@@ -163,24 +163,24 @@ cell.accessoryView = [[UISwitch alloc] init];
 - `等高的cell`
     - `storyboard自定义cell`
         - 1.创建一个继承自UITableViewCell的子类，比如XMGDealCell<br>
-        ![](../images/Snip20150602_305.png)
+        ![](/images/Snip20150602_305.png)
         - 2.在storyboard中
             - 往cell里面增加需要用到的子控件<br>
-            ![](../images/Snip20150602_302.png)
+            ![](/images/Snip20150602_302.png)
             - 设置cell的重用标识<br>
-            ![](../images/Snip20150602_303.png)
+            ![](/images/Snip20150602_303.png)
             - 设置cell的class为XMGDealCell<br>
-            ![](../images/Snip20150602_304.png)
+            ![](/images/Snip20150602_304.png)
         - 3.在控制器中
             - 利用重用标识找到cell
             - 给cell传递模型数据<br>
-            ![](../images/Snip20150602_301.png)
+            ![](/images/Snip20150602_301.png)
         - 4.在XMGDealCell中
             - 将storyboard中的子控件连线到类扩展中<br>
-            ![](../images/Snip20150602_299.png)
+            ![](/images/Snip20150602_299.png)
             - 需要提供一个模型属性，重写模型的set方法，在这个方法中设置模型数据到子控件上<br>
-            ![](../images/Snip20150602_298.png)
-            ![](../images/Snip20150602_300.png)
+            ![](/images/Snip20150602_298.png)
+            ![](/images/Snip20150602_300.png)
     - `xib自定义cell`
         - 1.创建一个继承自UITableViewCell的子类，比如XMGDealCell<br>
         - 2.创建一个xib文件（文件名建议跟cell的类名一样），比如XMGDealCell.xib
@@ -275,29 +275,29 @@ cell.accessoryView = [[UISwitch alloc] init];
 
 `// 分割线`
 `self.tableView.separatorColor = [UIColorredColor];`
-![](../images/屏幕快照 2015-06-04 10.57.43.png)
+![](/images/屏幕快照 2015-06-04 10.57.43.png)
 
 `// 隐藏分割线`
 `self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;`
-![](../images/屏幕快照 2015-06-04 10.58.05.png)
+![](/images/屏幕快照 2015-06-04 10.58.05.png)
 
 - 2、选中样式
 
 `// cell选中样式，貌似几个枚举效果都一样`
 `cell.selectionStyle = UITableViewCellSelectionStyleBlue;`
-![](../images/屏幕快照 2015-06-04 11.01.58.png)
+![](/images/屏幕快照 2015-06-04 11.01.58.png)
 
 `// cell选中背景色`
 `UIView *selectedBackground = [[UIView alloc] init];`
 `selectedBackground.backgroundColor = [UIColor greenColor];`
 `cell.selectedBackgroundView = selectedBackground;`
-![](../images/屏幕快照 2015-06-04 11.04.50.png)
+![](/images/屏幕快照 2015-06-04 11.04.50.png)
 
 - 3、背景色
 
 `// cell默认背景色`
 `cell.backgroundColor = [UIColor redColor];`
-![](../images/屏幕快照 2015-06-04 11.10.38.png)
+![](/images/屏幕快照 2015-06-04 11.10.38.png)
 
 ```objc
 // backgroundView 的优先级大于backgroundColor
@@ -305,7 +305,7 @@ UIView *background = [[UIView alloc] init];
 background.backgroundColor = [UIColor orangeColor];
 cell.backgroundView = background;
 ```
-![](../images/屏幕快照 2015-06-04 11.10.58.png)
+![](/images/屏幕快照 2015-06-04 11.10.58.png)
 
 - 设置背景色有两种方式，注意一点就是 :
     - backgroundView 的优先级大于backgroundColor
@@ -323,11 +323,11 @@ cell.backgroundView = background;
 };
 ```
 样式依次为：
-![](../images/屏幕快照 2015-06-04 11.18.42.png)
-![](../images/屏幕快照 2015-06-04 11.15.17.png)
-![](../images/屏幕快照 2015-06-04 11.17.19.png)
-![](../images/屏幕快照 2015-06-04 11.14.33.png)
-![](../images/屏幕快照 2015-06-04 11.14.56.png)
+![](/images/屏幕快照 2015-06-04 11.18.42.png)
+![](/images/屏幕快照 2015-06-04 11.15.17.png)
+![](/images/屏幕快照 2015-06-04 11.17.19.png)
+![](/images/屏幕快照 2015-06-04 11.14.33.png)
+![](/images/屏幕快照 2015-06-04 11.14.56.png)
 
 `// cell指示器`
 `cell.accessoryType = UITableViewCellAccessoryCheckmark;`
@@ -336,7 +336,7 @@ cell.backgroundView = background;
 
 `// 显示预定义按钮`
 `cell.accessoryView = [UIButtonbuttonWithType:UIButtonTypeContactAdd];`
-![](../images/屏幕快照 2015-06-04 11.41.00.png)
+![](/images/屏幕快照 2015-06-04 11.41.00.png)
 
 ```objc
     // 自定义view
@@ -347,7 +347,7 @@ cell.backgroundView = background;
     name.textColor = [UIColor lightGrayColor];
     cell.accessoryView = name;
 ```
-![](../images/屏幕快照 2015-06-04 11.43.17.png)
+![](/images/屏幕快照 2015-06-04 11.43.17.png)
 
 ## 二、cell的循环利用方式
 
@@ -419,11 +419,11 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 
 - 在storyboard中设置UITableView的Dynamic Prototypes Cell
 
-![](../images/Snip20150602_152.png)
+![](/images/Snip20150602_152.png)
 
 - 设置cell的重用标识
 
-![](../images/Snip20150602_153.png)
+![](/images/Snip20150602_153.png)
 
 - 在代码中利用重用标识获取cell
 
@@ -453,7 +453,7 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 
 - 实现界面如下：
 
-![](../images/屏幕快照 2015-06-04 15.07.43.png)
+![](/images/屏幕快照 2015-06-04 15.07.43.png)
 
 ## 1、等高cell
 
@@ -585,7 +585,7 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
     - 设置cell的重用标识  （同上）
     - 往cell中添加需要用到的子控件，实现如下界面
 
-![](../images/屏幕快照 2015-06-04 16.30.12.png)
+![](/images/屏幕快照 2015-06-04 16.30.12.png)
 
 - 3.在控制器中
     - 利用registerNib...方法注册xib文件
@@ -816,12 +816,12 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 
 - 效果如下：
 
-![](../images/屏幕快照 2015-06-05 22.33.08.png)
+![](/images/屏幕快照 2015-06-05 22.33.08.png)
 
 - 1、在storyboard\xib里实现如下界面
     - 使用自动布局添加约束,在xib里创建和在storyboard非常类似。
 
-![](../images/屏幕快照 2015-06-05 22.28.34.png)
+![](/images/屏幕快照 2015-06-05 22.28.34.png)
 
 - 2、计算cell高度
 - 2.1、在模型类中给每个cell添加一个高度属性
@@ -960,7 +960,7 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 
 - 结果如下：
 
-![](../images/屏幕快照 2015-06-06 00.00.22.png)
+![](/images/屏幕快照 2015-06-06 00.00.22.png)
 
 - 3.5、总结
 - 数据刷新的原则
@@ -975,7 +975,7 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 - 4.1、进入编辑模式
    - 添加一个按钮，响应点击事件，改变UITableView的状态。默认是进入删除模式，还有一个添加模式。
 
-![](../images/屏幕快照 2015-06-06 21.32.28.png)
+![](/images/屏幕快照 2015-06-06 21.32.28.png)
 
 ```objc
 // 编辑按钮
@@ -1033,7 +1033,7 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 
 - 给xib添加一个图片控件，显示选中状态,用于表示多选的状态，选中后如下面所示状
 
-![](../images/屏幕快照 2015-06-06 20.22.27.png)
+![](/images/屏幕快照 2015-06-06 20.22.27.png)
 
 
 - 然后给模型添加一个属性，用于表示cell的选中状态
@@ -1132,7 +1132,7 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 }
 ```
 
-![](../images/屏幕快照 2015-06-06 21.29.31.png)
+![](/images/屏幕快照 2015-06-06 21.29.31.png)
 
 - 4.4、批量删除方法2
 - 这里使用一个待删除数组记录选中的cell，然后点击删除按钮后删除选中所有选中cell.
@@ -1213,7 +1213,7 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 }
 ```
 
-![](../images/屏幕快照 2015-06-06 22.48.20.png)
+![](/images/屏幕快照 2015-06-06 22.48.20.png)
 
 - 其次，就在就是在点击删除按钮后进行操作，因为选中的cell有tableView自己保存，直接获取就好了。
 
@@ -1257,7 +1257,7 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 }
 ```
 
-![](../images/屏幕快照 2015-06-06 22.53.54.png)
+![](/images/屏幕快照 2015-06-06 22.53.54.png)
 
 - 5、tableView其他属性
     - tableFooterView / tableHeaderView
@@ -1276,7 +1276,7 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 
 - 6、自定义cell上的按钮
 
-![](../images/屏幕快照 2015-06-14 10.00.47.png)
+![](/images/屏幕快照 2015-06-14 10.00.47.png)
 
 - 这是IOS8.0新增的一个代理方法
 
@@ -1304,8 +1304,4 @@ dequeueReusableCellWithIdentifier:方法会自动查找cell，如果没有找到
 ```
 
 
-
-
-
-http://www.cnblogs.com/songliquan/
 
