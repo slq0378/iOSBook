@@ -19,5 +19,5 @@
    * [圆形头像实现](yuan_xing_tou_xiang_shi_xian.md)
    * [按钮实现简易scrollView滚动效果](an_niu_shi_xian_jian_yi_scrollview_gun_dong_xiao_guo.md)
    * [格式化时间显示](ge_shi_hua_shi_jian_xian_shi.md)
-   * 杂项总结
+   * [杂项总结](za_xiang_zong_jie.md)
 
