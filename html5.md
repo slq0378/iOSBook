@@ -435,4 +435,4 @@ $('btn').click(function(){
 
 ## WebView
 - Xcode7下使用webView
-![](../images/Xcode7加载webView需要设置plist.png)
+![](/images/Xcode7加载webView需要设置plist.png)
