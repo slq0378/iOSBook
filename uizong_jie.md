@@ -933,5 +933,3 @@ NSLog(@"%p--%p--%d",&numbers[1],&numbers[1] + 1,**(&numbers[1]+ 2));
     - &num + 1的跨度：num的占用字节数
 
 
-
-http://www.cnblogs.com/songliquan/
