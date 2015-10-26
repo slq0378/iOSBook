@@ -106,7 +106,7 @@
 
 - 效果图
 
-![](../images/屏幕快照 2015-06-17 14.12.30.png)
+![](/images/屏幕快照 2015-06-17 14.12.30.png)
 
 ### 实现过程：
 
@@ -305,7 +305,7 @@ typedefenum{
     // UIImageResizingModeTile 填充模式
     image = [image resizableImageWithCapInsets:edge resizingMode:UIImageResizingModeStretch];
     // 方法3
-    // 在../images.xcassets中对图片进行设置
+    // 在/images.xcassets中对图片进行设置
 
     imageView.image = image;
     [self.view addSubview:imageView];
@@ -322,11 +322,11 @@ typedefenum{
 
 - 会出现以下效果，默认是下边的图片，所以有必要对图片进行拉伸。
 
-![](../images/屏幕快照 2015-06-07 16.21.42.png)
+![](/images/屏幕快照 2015-06-07 16.21.42.png)
 
 - 其中方法3的设置是将图片导入Image.xcassets中后选中图片设置。
 
-![](../images/屏幕快照 2015-06-06 14.30.58.png)
+![](/images/屏幕快照 2015-06-06 14.30.58.png)
 
 - 可以通过代码设置按钮的内间距
 
@@ -337,16 +337,16 @@ typedefenum{
 ```
 - 或者直接在按钮的属性里设置
 
-![](../images/屏幕快照 2015-06-07 16.08.34.png)
+![](/images/屏幕快照 2015-06-07 16.08.34.png)
 
 - 设置过间距后，就可以计算btn的高度时，因为textlable的高度不固定，所以让btn的高度等于textLable 的高度。但是又因为按钮背景图片的边缘有一部分是透明的，如下：红色是按钮，蓝色是图片。
 
-![](../images/屏幕快照 2015-06-07 16.04.27.png)
+![](/images/屏幕快照 2015-06-07 16.04.27.png)
 
 
 - 所以显示文字高度会，这里对其按钮高度 + 30，而textLable默认会水平垂直居中。
 
-![](../images/屏幕快照 2015-06-07 16.07.07.png)
+![](/images/屏幕快照 2015-06-07 16.07.07.png)
 
 - 5、在控制器中得实现方法和以往的一样
     - 只需要在这里判断以下消息显示的时间是否一致，如果一致就隐藏。
@@ -421,7 +421,7 @@ typedefenum{
 
 - 5、用两个cell实现界面
 
-![](../images/屏幕快照 2015-06-07 17.32.08.png)
+![](/images/屏幕快照 2015-06-07 17.32.08.png)
 
 - 只需改动一些代码就行。
     - 1、改动每个cell的标志 一个是me，一个是other
