@@ -22,6 +22,7 @@
    * [杂项总结](za_xiang_zong_jie.md)
    * [UIDynamic物理引擎](uidynamicwu_li_yin_qing.md)
    * [核心动画](he_xin_dong_hua.md)
+   * 代理和block传值
 * 网络和多线程
    * [网络](wang_luo.md)
    * [多线程](duo_xian_cheng.md)
