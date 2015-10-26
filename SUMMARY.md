@@ -47,4 +47,5 @@
    * [真机调试-分享-推送通知](zhen_ji_diao_8bd5-_fen_4eab-_tui_song_tong_zhi.md)
    * [定位-地图](ding_4f4d-_di_tu.md)
    * [二维码](er_wei_ma.md)
+   * 通讯录
 
