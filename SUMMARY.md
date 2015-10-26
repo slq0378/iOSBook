@@ -6,4 +6,5 @@
 * [UIView相关](uiviewxiang_guan.md)
    * [UIButton](uibutton.md)
 * 多媒体相关
+   * 后台播放音频
 
