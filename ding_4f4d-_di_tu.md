@@ -6,7 +6,7 @@
 - `CLLocationManager`
 - 在获取用户信息时会弹出获取用户隐私的对话框
 
-![](../images/Snip20150823_7.png)
+![](/images/Snip20150823_7.png)
 
 - iOS设置里每个应用的位置授权信息
 
@@ -22,7 +22,7 @@
 		- 必须需要手动添加info.list的key `NSLocationWhenInUseUsageDescription`
 		- 必须实现后台获取：在工程-Capablities->Background Modes -> Location updates
 
-		![](../images/Snip20150823_8.png)
+		![](/images/Snip20150823_8.png)
 
 ```objc
 #import "ViewController.h"
@@ -502,7 +502,7 @@
 ```
 
 - `MKAnnnotationView`
-![](../images/Snip20150824_1.png)
+![](/images/Snip20150824_1.png)
 
 ```objc
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
