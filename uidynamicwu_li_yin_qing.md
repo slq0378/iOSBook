@@ -242,14 +242,14 @@
 		* 2 Any : 任意
 		* 3 Regular : 宽松(大)
 
-![](../images/SizeClasses00.png)
+![](/images/SizeClasses00.png)
 -
 
 # 静态库
 - 静态库
 - 动态库
 
-![](../images/Snip20150820_2.png)
+![](/images/Snip20150820_2.png)
 
 - 每一个设备都有属于自己的CPU架构(4s/6plus)
 - 每一个静态支持的架构是固定(liblibstatic.a)
@@ -275,18 +275,18 @@
 
 - 静态库合并
 
-![](../images/Snip20150820_3.png)
+![](/images/Snip20150820_3.png)
 
 - 静态库调试
 
 ## .framework
 - 默认生成的都是动态库
 
-![](../images/Snip20150820_6_1.png)
+![](/images/Snip20150820_6_1.png)
 
 - 如果要生成静态库，需要是项目里设置
 
-![](../images/Snip20150820_7.png)
+![](/images/Snip20150820_7.png)
 
 
 
