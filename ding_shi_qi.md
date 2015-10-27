@@ -61,7 +61,7 @@
  * the most recent target invocation. Time is represented using the
  * normal Core Animation conventions, i.e. Mach host time converted to
  * seconds. */
-
+// 但是 duration只是个大概的时间，如果CPU忙于其它计算，就没法保证以相同的频率执行屏幕的绘制操作，这样会跳过几次调用回调方法的机会。 frameInterval属性是可读可写的NSInteger型值，标识间隔多少帧调用一次selector 方法，默认值是1，即每帧都调用一次。
 @property(readonly, nonatomic) CFTimeInterval timestamp;
 @property(readonly, nonatomic) CFTimeInterval duration;
 
@@ -106,6 +106,13 @@
     NSArray *colors = @[[UIColor redColor],[UIColor blueColor],[UIColor greenColor]];
     self.view.backgroundColor = colors[arc4random_uniform(3)];
     NSLog(@"%zd--%zd",self.displayLink.timestamp,self.displayLink.duration);
+}
+
+- (void)dealloc
+{
+    self.displayLink.paused = true;
+    [self.displayLink invalidate];
+    self.displayLink = nil;
 }
 
 ```
