@@ -86,3 +86,6 @@
     - 创建对象 `+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;`
     - 添加到主运行循环 `- (void)addToRunLoop:(NSRunLoop *)runloop forMode:(NSString *)mode;`
     - 从主运行循环移除 `- (void)removeFromRunLoop:(NSRunLoop *)runloop forMode:(NSString *)mode;`
+    - 释放定时器 `- (void)invalidate;`
+    - 定时器状态,默认是false  `@property(getter=isPaused, nonatomic) BOOL paused;`
+    - 刷新频率,设置这个参数来控制定时器刷新频率 `@property(nonatomic) NSInteger frameInterval;`
