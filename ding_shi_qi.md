@@ -107,7 +107,7 @@
     self.view.backgroundColor = colors[arc4random_uniform(3)];
     NSLog(@"%zd--%zd",self.displayLink.timestamp,self.displayLink.duration);
 }
-
+// 手动关闭定时器
 - (void)dealloc
 {
     self.displayLink.paused = true;
