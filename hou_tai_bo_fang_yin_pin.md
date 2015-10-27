@@ -7,6 +7,8 @@
 - 1、首先要配置应用的后台模式
 	- 工程->Targets->Capabilities->Background Modes->ON
 	- 然后勾选下面的Audio and AirPlay
+![](images/屏幕快照 2015-10-20 下午4.31.48.png)
+
 - 2、在AppDelegate中设置回调
 
 ```
