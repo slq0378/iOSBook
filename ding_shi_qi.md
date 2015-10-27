@@ -162,3 +162,4 @@
     - `+timerWithTimeInterval::`
     - `-initWithFireDate:`
     - 启动 `- (void)fire;`
+    - 设置启动时间 `@property (copy) NSDate *fireDate;`
