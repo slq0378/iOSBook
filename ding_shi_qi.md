@@ -154,6 +154,4 @@
 @property (readonly, retain) id userInfo;
 
 @end
-
-
 ```
