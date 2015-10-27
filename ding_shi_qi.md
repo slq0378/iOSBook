@@ -82,3 +82,7 @@
 
 @end
 ```
+- 真正可用的几个属性和方法是
+    - 创建对象 `+ (CADisplayLink *)displayLinkWithTarget:(id)target selector:(SEL)sel;`
+    - 添加到主运行循环 `- (void)addToRunLoop:(NSRunLoop *)runloop forMode:(NSString *)mode;`
+    - 从主运行循环移除 `- (void)removeFromRunLoop:(NSRunLoop *)runloop forMode:(NSString *)mode;`
