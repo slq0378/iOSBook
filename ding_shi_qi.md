@@ -89,3 +89,25 @@
     - 释放定时器 `- (void)invalidate;`
     - 定时器状态,默认是false  `@property(getter=isPaused, nonatomic) BOOL paused;`
     - 刷新频率,设置这个参数来控制定时器刷新频率 `@property(nonatomic) NSInteger frameInterval;`
+
+- 适用方式
+
+```
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    // 初始化
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateColor)];
+    // 添加到Runloop
+    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    self.displayLink.frameInterval = 2; // 设置刷新频率，默认是每秒60次，设置为2表示每秒30次
+
+}
+- (void)updateColor
+{
+    NSArray *colors = @[[UIColor redColor],[UIColor blueColor],[UIColor greenColor]];
+    self.view.backgroundColor = colors[arc4random_uniform(3)];
+    NSLog(@"%zd--%zd",self.displayLink.timestamp,self.displayLink.duration);
+}
+
+```
