@@ -167,4 +167,20 @@
     - 最大可容忍时间 `tolerance` 在容忍时间内调用定时器
     - 释放定时器，主要是从runloop移除 `invalidate`
     - 传递用户数据 `userInfo`
-    - `
+- 使用方法
+
+```
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateColor) userInfo:nil repeats:YES];
+    
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+
+}
+- (void)updateColor
+{
+    NSArray *colors = @[[UIColor redColor],[UIColor blueColor],[UIColor greenColor]];
+    self.view.backgroundColor = colors[arc4random_uniform(3)];
+    NSLog(@"%zd--%zd",self.displayLink.timestamp,self.displayLink.duration);
+}
+```
