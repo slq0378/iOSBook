@@ -173,7 +173,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateColor) userInfo:nil repeats:YES];
-    
+    // 添加至运行循环
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 
 }
