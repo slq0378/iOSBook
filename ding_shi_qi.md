@@ -160,5 +160,5 @@
     - 构造方法 
     - `+scheduledTimerWithTimeInterval::`
     - `+timerWithTimeInterval::`
-    - `-initWithFireDate`
-    - 启动时间
+    - `-initWithFireDate:`
+    - 启动 `- (void)fire;`
