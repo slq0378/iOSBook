@@ -155,3 +155,10 @@
 
 @end
 ```
+
+- 方法和属性
+    - 构造方法 
+    - `+scheduledTimerWithTimeInterval::`
+    - `+timerWithTimeInterval::`
+    - `-initWithFireDate`
+    - 启动时间
