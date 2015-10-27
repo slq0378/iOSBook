@@ -88,7 +88,7 @@
     - 定时器状态,默认是false  `@property(getter=isPaused, nonatomic) BOOL paused;`
     - 刷新频率,设置这个参数来控制定时器刷新频率 `@property(nonatomic) NSInteger frameInterval;`
 
-- 适用方式
+- 使用方式
 
 ```
 - (void)viewDidLoad {
