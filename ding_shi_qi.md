@@ -162,4 +162,9 @@
     - `+timerWithTimeInterval::`
     - `-initWithFireDate:`
     - 启动 `- (void)fire;`
-    - 设置启动时间 `@property (copy) NSDate *fireDate;`
+    - 设置启动时间 `fireDate;`
+    - 间隔时间 `timeInterval`
+    - 最大可容忍时间 `tolerance` 在容忍时间内调用定时器
+    - 释放定时器，主要是从runloop移除 `invalidate`
+    - 传递用户数据 `userInfo`
+    - `
