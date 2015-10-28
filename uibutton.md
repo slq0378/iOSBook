@@ -45,6 +45,7 @@
 # UIButton 内部布局变化
 
 ## 竖排
+![](images/屏幕快照 2015-10-28 下午10.04.11.png)
 
 ```
 - (void)viewDidLoad {
