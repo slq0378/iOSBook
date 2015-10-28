@@ -41,3 +41,34 @@
 
 - 结论
 - 应该是在改变一个控件的frame做动画时，控件的交互被关闭了，所以要在做动画时手动开启交互。
+
+# UIButton 内部布局变化
+
+```
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    _focusBtn  = [UIButton buttonWithType:UIButtonTypeCustom];
+    _focusBtn.frame = CGRectMake(10, 100, 52, 52);
+    _focusBtn.backgroundColor = [UIColor greenColor];
+//    _focusBtn = [[UIButton alloc] initWithFrame:CGRectMake(70, 70, 52, 52)];
+    [_focusBtn setTitle:@"关注" forState:UIControlStateNormal];
+    
+    CGFloat buttonWidth = 52;
+    CGFloat textWidth = 30;
+    CGFloat imageWidth = 19;
+//    [_focusBtn setImage:[UIImage imageNamed:@"chatpanel_focusBtn"] forState:UIControlStateNormal];
+    [_focusBtn setImage:[UIImage imageNamed:@"chatpanel_focusBtn"] forState:UIControlStateNormal];
+    [_focusBtn setBackgroundImage:[UIImage imageNamed:@"chatpanel_redcolor"] forState:UIControlStateNormal];
+    [_focusBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [_focusBtn setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
+    
+    [_focusBtn setImageEdgeInsets:UIEdgeInsetsMake(6,(52-20)/2, 0, _focusBtn.titleLabel.bounds.size.width )];
+    [_focusBtn setTitleEdgeInsets:UIEdgeInsetsMake(17.5 + 6 , - ([_focusBtn currentImage].size.width)  + 7 , 9,0 )];
+   
+    
+    [self.view addSubview:_focusBtn];
+
+    
+}
+```
