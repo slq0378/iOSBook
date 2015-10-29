@@ -80,12 +80,15 @@
 ## UIButton 默认布局
 - 默认布局是横排：图片在左，label在右，并且居中方式是水平居中对齐，垂直居中对齐。
     - ![](images/屏幕快照 2015-10-29 08.44.43.png)
-
+    - 紫色是image的frame，绿色是label的frame，黄色是button的frame
 - 如果要改变为竖排，那么首先要把对齐方式改为水平靠左，垂直靠上。
     - ![](images/屏幕快照 2015-10-29 08.52.37.png)    
     - 然后再设置每个子控件的`UIEdgeInsets`
     - 最终展示效果是这样的
     - ![](images/屏幕快照 2015-10-29 08.56.50.png)
+    - 中间过渡过程是这样的
+    - ![](images/屏幕快照 2015-10-29 09.01.23.png)
+    - 由此图可见，
 ``` objc
     [_focusBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [_focusBtn setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
