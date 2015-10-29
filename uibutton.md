@@ -84,6 +84,8 @@
 - 如果要改变为竖排，那么首先要把对齐方式改为水平靠左，垂直靠上。
     - ![](images/屏幕快照 2015-10-29 08.52.37.png)    
     - 然后再设置每个子控件的`UIEdgeInsets`
+    - 最终展示效果是这样的
+    - ![](images/屏幕快照 2015-10-29 08.56.50.png)
 ``` objc
     [_focusBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [_focusBtn setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
