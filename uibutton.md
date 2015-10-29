@@ -103,3 +103,59 @@
 ```
 - 这样的效果就是
 - ![](images/屏幕快照 2015-10-28 下午10.04.11.png)
+- 下午计算文字的宽度的时候一直出问题，主要是根据文字宽度计算内边距，但是文字长度不等，对这个布局有很大影响。
+
+```objc
+- (void)focusedBtn:(NSInteger)number
+{
+    _focusedBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, 52, 52)];
+    NSString *title = @"";
+    if (number >= 10000)
+    {
+        title = [NSString stringWithFormat:@"%.1f万",number/10000.0];
+    }
+    else
+    {
+        title = [NSString stringWithFormat:@"%zd",number];
+
+    }
+        
+    [_focusedBtn setTitle:title forState:UIControlStateNormal];
+    
+    UILabel *lab = [[UILabel alloc] init];
+    lab.text = @"1";
+    lab.font = [UIFont systemFontOfSize:12]; // font 12 ： label.width 7
+    [lab sizeToFit];
+    NSLog(@"%@",NSStringFromCGSize(lab.bounds.size));
+    
+    NSLog(@"buttuon:%@",NSStringFromCGRect(_focusedBtn.frame));
+    NSLog(@"imageView:%@",NSStringFromCGRect(_focusedBtn.imageView.frame));
+    NSLog(@"textLabel:%@",NSStringFromCGRect(_focusedBtn.titleLabel.frame));
+    NSLog(@"---------------------");
+
+    CGFloat buttonWidth = 52;
+    CGFloat textWidth = 40;
+    CGFloat imageWidth = 19;
+    CGFloat imageHeight = 19;
+    [_focusedBtn setImage:[UIImage imageNamed:@"chatpanel_focusBtn"] forState:UIControlStateNormal]; // 关注后这个图片改变了
+    [_focusedBtn setBackgroundImage:[UIImage imageNamed:@"chatpanel_redcolor"] forState:UIControlStateNormal];
+    [_focusedBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [_focusedBtn setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
+    
+    [_focusedBtn setImageEdgeInsets:UIEdgeInsetsMake(6,(buttonWidth-imageWidth)/2, 0, 0 )];
+  
+    [_focusedBtn.titleLabel setFont:[UIFont systemFontOfSize:12.0f]];
+    [_focusedBtn.titleLabel setContentMode:UIViewContentModeCenter];
+    _focusedBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_focusedBtn.titleLabel sizeToFit];
+    // 我尝试在label宽度基础上加上一个字符宽度。只要字符不超过一定长度，显示就没有问题
+    [_focusedBtn setTitleEdgeInsets:UIEdgeInsetsMake(imageHeight + 10 ,- _focusedBtn.titleLabel.bounds.size.width/2 + 7, 9,0)];
+    
+    
+    NSLog(@"buttuon:%@",NSStringFromCGRect(_focusedBtn.frame));
+    NSLog(@"imageView:%@",NSStringFromCGRect(_focusedBtn.imageView.frame));
+    NSLog(@"textLabel:%@",NSStringFromCGRect(_focusedBtn.titleLabel.frame));
+    
+    [self.view addSubview:_focusedBtn];
+}
+```
