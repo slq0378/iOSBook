@@ -77,6 +77,15 @@
 }
 ```
 
-- UIButton 默认布局
-    - 默认布局是图片在左，label在右，并且居中方式是水平居中对齐，垂直居中对齐。
+## UIButton 默认布局
+- 默认布局是图片在左，label在右，并且居中方式是水平居中对齐，垂直居中对齐。
     - ![](images/屏幕快照 2015-10-29 08.44.43.png)
+
+- 如果要改变为竖排，那么首先要把对齐方式改为水平靠左，垂直靠上。
+    - ![](images/屏幕快照 2015-10-29 08.52.37.png)    
+
+``` objc
+    [_focusBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [_focusBtn setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
+```
+-
