@@ -96,3 +96,10 @@
 ```
     
 - 注：在iOS中，UIEdgeInsets跟web中的padding一样的分top，left，bottom和right，正数就表示与周围的距离变大，例如：默认在是0，我把top变成了10，这时该元素与顶端的距离就会增加10，即元素下移，距离变大。如果是负数的话效果就相反了，距离拉近。
+
+```objc
+     [_focusBtn setImageEdgeInsets:UIEdgeInsetsMake(6,(52-20)/2, 0, _focusBtn.titleLabel.bounds.size.width )];
+    [_focusBtn setTitleEdgeInsets:UIEdgeInsetsMake(17.5 + 6 , - ([_focusBtn currentImage].size.width)  + 7 , 9,0 )];
+```
+- 这样的效果就是
+- ![](images/屏幕快照 2015-10-28 下午10.04.11.png)
