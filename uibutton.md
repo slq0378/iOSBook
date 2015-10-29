@@ -89,7 +89,7 @@
     - 中间过渡过程是这样的
     - ![](images/屏幕快照 2015-10-29 09.01.23.png)
     - 由此图可见，image要的left要右移，也就是增大正数，但是label的left要左移，也就是要减小为负数。
-    - 这里总结一下，`UIEdgeInsets`的top，left，bottom，right属性，分别表示
+    - 这里总结一下，`UIEdgeInsets`的top，left，bottom，right属性，分别表示处于父控件的内部边距，如left，为正数，表示右移多少，为负数，表示左移多少。
 ``` objc
     [_focusBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [_focusBtn setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
