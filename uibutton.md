@@ -88,4 +88,5 @@
     [_focusBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     [_focusBtn setContentVerticalAlignment:UIControlContentVerticalAlignmentTop];
 ```
-- 
+    
+- 注：在iOS中，UIEdgeInsets跟web中的padding一样的分top，left，bottom和right，正数就表示与周围的距离变大，例如：默认在是0，我把top变成了10，这时该元素与顶端的距离就会增加10，即元素下移，距离变大。如果是负数的话效果就相反了，距离拉近。
