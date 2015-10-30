@@ -110,6 +110,7 @@
 - ![](images/屏幕快照 2015-10-29 下午9.21.42.png)
 - ![](images/屏幕快照 2015-10-29 下午9.17.55.png)
 
+
 ```objc
 - (void)focusedBtn:(NSInteger)number
 {
@@ -164,3 +165,5 @@
     [self.view addSubview:_focusedBtn];
 }
 ```
+
+- 总结： 这个UIButton的内部控件的自定义，位置调整最重要
