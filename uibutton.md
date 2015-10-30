@@ -166,4 +166,6 @@
 }
 ```
 
-- 总结： 这个UIButton的内部控件的自定义，位置调整最重要
+- 总结： 这个UIButton的内部控件的自定义，位置调整最重要。
+    - 1、首先要改变内部控件的对其方式，`setContentHorizontalAlignment` `setContentVerticalAlignment`
+    - 2、然后重新设置每个子控件的内部间距，这个设置要注意，如果要实现比较好的效果，需要精细调整。
