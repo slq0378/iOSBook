@@ -57,4 +57,5 @@
    * [正则表达式](zheng_ze_biao_da_shi.md)
    * [swift与众不同](swiftyu_zhong_bu_tong.md)
    * [qq列表实现](qqlie_biao_shi_xian.md)
+   * svn冲突解决
 
