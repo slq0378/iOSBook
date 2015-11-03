@@ -620,6 +620,19 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
 }
 
 @end
+```
+- 测试
 
+```objc
+   SLQScrollView *scrollView = [[SLQScrollView alloc] initWithFrame:self.view.bounds];
+    scrollView.delegate = self;
+    scrollView.contentSize = CGSizeMake(ScreenWidth * 3, ScreenHeight);
+    
+    for(NSInteger i = 0 ; i < 3 ; i++)
+    {
+        UIView *view = [[UIView alloc] initWithFrame:self.view.bounds];
+        view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0  blue:arc4random_uniform(255)/255.0  alpha:1.0f];
+        [scrollView addSubview:view];
+    }
 
 ```
