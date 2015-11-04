@@ -12,7 +12,7 @@
 
 ```objc
 #pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wundeclared-selector"
+#pragma clang diagnostic i![](屏蔽编译警告.png)gnored "-Wundeclared-selector"
     if ([self.selectedViewController respondsToSelector:@selector(isReadyForEditing)]) {
         boolNumber = [self.selectedViewController performSelector:@selector(isReadyForEditing)];
     }
