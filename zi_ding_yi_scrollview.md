@@ -624,6 +624,8 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
 - 测试
 - 这次的滚动没有问题，通过两个定时器来控制器两个View的滚动，
 - `clipsToBounds` 这个属性控制超过边界不显示
+- 问题，如果有新广播，就找到没有滚动的那一条，修改数据
+
 ```objc
 //
 //  ViewController.m
