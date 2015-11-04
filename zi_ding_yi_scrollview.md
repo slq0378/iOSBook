@@ -624,15 +624,191 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
 - 测试
 
 ```objc
-   SLQScrollView *scrollView = [[SLQScrollView alloc] initWithFrame:self.view.bounds];
-    scrollView.delegate = self;
-    scrollView.contentSize = CGSizeMake(ScreenWidth * 3, ScreenHeight);
+//
+//  ViewController.m
+//  SLQScrollView
+//
+//  Created by songlq on 15/10/27.
+//  Copyright (c) 2015年 songlq. All rights reserved.
+//
+
+#import "ViewController.h"
+#import "TestScrollView.h"
+
+#import "SLQScrollView.h"
+
+@interface ViewController () <UIScrollViewDelegate>
+
+@property (nonatomic,strong) CADisplayLink *displayLink;
+@property (nonatomic,strong) CADisplayLink *displayLink2;
+@property (nonatomic,strong) NSTimer *timer;
+
+/**滚动条*/
+@property (nonatomic, weak) UIView *scrollView;
+/**索引*/
+@property (nonatomic, assign) NSInteger index;
+/**索引*/
+@property (nonatomic, assign) NSInteger next;
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    [self setupScrollView];
+}
+/**
+ *  初始化scrollView
+ */
+- (void)setupScrollView
+{
+    UIView *scroll = [[UIView alloc] initWithFrame:CGRectMake(20, 100, 200, 100)];
+    self.scrollView = scroll;
+    [self.view addSubview:self.scrollView];
+    self.scrollView.backgroundColor = [UIColor orangeColor];
     
+    // 设置基本属性
+    NSArray *colors = @[[UIColor redColor],[UIColor blueColor],[UIColor greenColor]];
+        
     for(NSInteger i = 0 ; i < 3 ; i++)
     {
-        UIView *view = [[UIView alloc] initWithFrame:self.view.bounds];
-        view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0  blue:arc4random_uniform(255)/255.0  alpha:1.0f];
-        [scrollView addSubview:view];
+        UIView *view = [[UIView alloc] init];
+        UILabel *label = [[UILabel alloc] init];
+        if ( 0 == i) {
+            view.frame = CGRectMake(0, 0, 200, 44);
+        }
+        else
+        {
+            view.frame = CGRectMake(200, 0, 200, 44);
+        }
+        label.frame = CGRectMake(0, 0, 100, 44);
+        view.backgroundColor = colors[i];
+        view.tag = 100 + i;
+
+        label.text =  [NSString stringWithFormat:@"%zd啦啦啦啦啦啦啦啦",i];
+        [view addSubview:label];
+        label.backgroundColor = [UIColor grayColor];
+//        [label sizeThatFits:CGSizeMake(100, 44)];
+        label.center = view.center;
+        [self.scrollView addSubview:view];
     }
+    
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
+    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+//    self.displayLink.paused = YES;
+    self.displayLink2 = [CADisplayLink displayLinkWithTarget:self selector:@selector(update2)];
+    [self.displayLink2 addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    self.displayLink2.paused = YES;
+}
+- (void)update2
+{
+    UIView *view = self.scrollView.subviews[self.next]; // 取出View
+    view.hidden = NO;
+    NSInteger count = self.scrollView.subviews.count;
+    CGRect rect = view.frame;
+    rect.origin.x -- ;
+    view.frame = rect;
+    NSLog(@"next22222----%zd",self.next);
+    
+    if (view.frame.origin.x == -(view.frame.size.width)) {
+        // 回到定时器
+        // 恢复自己的位置
+        rect.origin.x  = view.frame.size.width;
+        view.frame = rect;
+        self.index = (self.next + 1)%count;
+        view.hidden = YES;
+        self.displayLink.paused = NO;
+        self.displayLink2.paused = YES;
+
+    }
+}
+- (void)update
+{
+    UIView *view = self.scrollView.subviews[self.index]; // 取出View
+    view.hidden = NO;
+    
+    NSInteger count = self.scrollView.subviews.count;
+    CGRect rect = view.frame;
+    rect.origin.x -- ;
+    view.frame = rect;
+    NSLog(@"index11111----%zd",self.index);
+    
+    if (view.frame.origin.x == -(view.frame.size.width)) {
+        // 开启第二个定时器
+        // 恢复自己的位置
+        rect.origin.x  = view.frame.size.width ;
+        view.frame = rect;
+        view.hidden = YES;
+        self.index = (self.index + 1)%count;
+        self.displayLink2.paused = NO;
+        self.displayLink.paused = YES;
+
+    }
+//    else if (self.scrollView.frame.size.width + 10)
+//    {
+//        // 设置偏移量为 2*width
+//        //        offset.x = 0;
+//        //        self.scrollView.contentOffset = offset;
+//        UIView *firstView = [self.scrollView.subviews firstObject];
+//        UIView *lastView = [self.scrollView.subviews lastObject];
+//        [self exchangeView:firstView withView:lastView];
+//        //        [firstView removeFromSuperview];
+//        //        firstView.frame = CGRectMake(lastView.frame.origin.x, lastView.frame.origin.y, firstView.frame.size.width, firstView.frame.size.height);
+//        //
+//        //        [self.scrollView addSubview:firstView];
+//        
+//    }
+    
+    
+    
+//    NSInteger count = self.scrollView.subviews.count;
+//    for (int i = 0; i<count; i++)
+//    {
+//        UIView *view = self.scrollView.subviews[i]; // 取出imageView
+//        NSInteger index = view.tag - 100; // 获得当前页码
+//        
+//        if (i == 0) // 第一张图片
+//        {
+//            index--; // 页码索引减1
+//        }
+//        else if (i == 2) // 第三张图片，也就是最后一张
+//        {
+//            index++; // 页码索引加1
+//        }
+//        // 其他图片，
+//        if (index < 0) // 如果索引小于0 ，来到了最左边，那么向左滑动的下一张图片位为总数减去1
+//        {
+//            index = count - 1;
+//        }
+//        else if (index >= count) // 如果索引大于等于页码总数，来到最右边，设置页码索引为0
+//        {
+//            index = 0;
+//        }
+//        view.tag = index + 100; // 设置View的tag为其索引值
+//    }
+    
+
+}
+
+- (void)exchangeView:(UIView *)first withView:(UIView *)second
+{
+    CGRect firstFrame = first.frame;
+    CGRect secondFrame = second.frame;
+    first.frame = secondFrame;
+    second.frame = firstFrame;
+    [self.scrollView setNeedsDisplay];
+}
+
+- (void)dealloc
+{
+    [self.displayLink invalidate];
+    [self.displayLink2 invalidate];
+    self.displayLink2 = nil;
+    self.displayLink = nil;
+}
+
+@end
+
 
 ```
