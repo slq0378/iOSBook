@@ -24,7 +24,7 @@
     - 2、在右边面板中选中“Build Phases”。
     - 3、展开“Compile Sources”
     - 4、在需要屏蔽警告的源文件一行中双击“Compiler F lags”。
-    - 
+    - ![](images/屏蔽编译警告.png)
     - 5、在弹出窗口中输入-w
 
 
