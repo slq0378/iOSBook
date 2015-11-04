@@ -622,7 +622,8 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
 @end
 ```
 - 测试
-
+- 这次的滚动没有问题，通过两个定时器来控制器两个View的滚动，
+- `clipsToBounds`
 ```objc
 //
 //  ViewController.m
