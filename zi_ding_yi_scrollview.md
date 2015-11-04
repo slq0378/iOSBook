@@ -654,8 +654,30 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 按钮
+    UIButton *btn = [[UIButton alloc] init];
+    btn.frame = CGRectMake(40, 250, 44, 20);
+    btn.backgroundColor = [UIColor greenColor];
+    [btn setTitle:@"更新数据" forState:UIControlStateNormal];
+    [btn sizeToFit];
+    [btn addTarget:self action:@selector(updateData) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
     [self setupScrollView];
 }
+
+/** 找到不在滚动的那个控件，替换数据 */
+- (void)updateData
+{
+    for (NSInteger i = 0 ; i < 3; i ++) {
+        if (i != self.index && i != self.next ) {
+            NSLog(@"update: %zd",i);
+            UILabel *label = (UILabel *)self.scrollView.subviews[i].subviews[0]; // 取出View
+            label.text = @"替换了，替换了，替换了";
+        }
+    }
+}
+
 /**
  *  初始化scrollView
  */
@@ -716,10 +738,8 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
     CGRect rect = view.frame;
     rect.origin.x -- ;
     view.frame = rect;
-    NSLog(@"next22222----%zd",self.next);
-    if (view.frame.origin.x == -(view.frame.size.width)/2) {
-        rect.origin.x -- ;
-        view.frame = rect;
+
+    if (view.frame.origin.x == -(view.frame.size.width)+self.scrollView.frame.size.width - 50) {
         self.index = (self.next + 1)%count;
         self.displayLink.paused = NO;
     }
@@ -741,10 +761,9 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
     CGRect rect = view.frame;
     rect.origin.x -- ;
     view.frame = rect;
-    NSLog(@"index11111----%zd",self.index);
-    if (view.frame.origin.x == -(view.frame.size.width)/2) {
-        rect.origin.x -- ;
-        view.frame = rect;
+
+    if (view.frame.origin.x == -(view.frame.size.width)+self.scrollView.frame.size.width - 50) {
+
         self.next = (self.index + 1)%count;
         self.displayLink2.paused = NO;
     }
@@ -754,17 +773,7 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
         rect.origin.x  = view.frame.size.width ;
         view.frame = rect;
         self.displayLink.paused = YES;
-        
     }
-}
-
-- (void)exchangeView:(UIView *)first withView:(UIView *)second
-{
-    CGRect firstFrame = first.frame;
-    CGRect secondFrame = second.frame;
-    first.frame = secondFrame;
-    second.frame = firstFrame;
-    [self.scrollView setNeedsDisplay];
 }
 
 - (void)dealloc
@@ -776,5 +785,4 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
 }
 
 @end
-
 ```
