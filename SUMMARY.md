@@ -60,5 +60,5 @@
    * [qq列表实现](qqlie_biao_shi_xian.md)
    * [svn冲突解决](svnchong_tu_jie_jue.md)
    * [pragma使用](pragmashi_yong.md)
-   * Debug Symbol(调试符号)
+   * Debug Symbol
 
