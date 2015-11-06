@@ -6,7 +6,7 @@
 	warning: (i386) /UsersLibrary/Developer/Xcode/DerivedData/ProjectName-ebyadedaazwurqcvfzmyzzacvlbg/Build/Intermediates/ ProjectName.build/Debug-iphonesimulator/ProjectName.build/Objects-normal/i386/ClassName.o unable to open object file
 ```
 
-	- 通过在Google里面搜索，终于弄明白了，通过在XCode里面将Generate Debug Symbol的值设为NO，重新编译一下生成静态库，这次编译出来的静态库再也不会产生已经警告了。这是为什么呢？
+- 通过在Google里面搜索，终于弄明白了，通过在XCode里面将Generate Debug Symbol的值设为NO，重新编译一下生成静态库，这次编译出来的静态库再也不会产生已经警告了。这是为什么呢？
 
 ## 一、 Debug Symbol(调试符号)
 
@@ -20,7 +20,7 @@
 	3 UIKit 0×30a740ac 0×30a54000 + 131244
 	```
 	
-*的log信息转换成*
+- 的log信息转换成
     
     ```
 	Thread 0 Crashed:
