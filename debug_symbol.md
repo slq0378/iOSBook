@@ -1,23 +1,35 @@
 # Debug Symbol(调试符号)
 ## 问题
 - 最近用XCode做了一个静态库，在自己电脑上别的App project中编译使用没有任何问题，但是传给别的同事使用在编译的时候就会出现类似于下面警告。
+
+```
 	warning: (i386) /UsersLibrary/Developer/Xcode/DerivedData/ProjectName-ebyadedaazwurqcvfzmyzzacvlbg/Build/Intermediates/ ProjectName.build/Debug-iphonesimulator/ProjectName.build/Objects-normal/i386/ClassName.o unable to open object file
+```
+
 	- 通过在Google里面搜索，终于弄明白了，通过在XCode里面将Generate Debug Symbol的值设为NO，重新编译一下生成静态库，这次编译出来的静态库再也不会产生已经警告了。这是为什么呢？
 
 ## 一、 Debug Symbol(调试符号)
 
 - 因为借助符号调试程序可以将类似
+
+    ```
 	Thread 0 Crashed:
 	0 libobjc.A.dylib 0×300c87ec 0×300bb000 + 55276
 	1 MobileLines 0×00006434 0×1000 + 21556
 	2 MobileLines 0×000064c2 0×1000 + 21698
 	3 UIKit 0×30a740ac 0×30a54000 + 131244
-的log信息转换成
+	```
+	
+*的log信息转换成*
+    
+    ```
 	Thread 0 Crashed:
 	0 libobjc.A.dylib 0×300c87ec objc_msgSend + 20
 	1 MobileLines 0×00006434 -[BoardView setSelectedPiece:] (BoardView.m:321)
 	2 MobileLines 0×000064c2 -[BoardView touchesBegan:withEvent:] (BoardView.m:349)
 	3 UIKit 0×30a740ac -[UIWindow sendEvent:] + 264
+	```
+	
 - 主要是方便开发人员获取调试信息
 
 ## 二、DWARF
