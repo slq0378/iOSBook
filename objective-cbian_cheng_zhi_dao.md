@@ -8,9 +8,10 @@
     - `Model` 主要封装模型对象中的数据和基本行为。
     - `View` 主要向用户展示信息。
     - `Controller` 主要负责View和Model的沟通。
+![](Snip20151107_1.png)
 - 所谓`MVC`混合模式
-    - 组合
-    - 命令
-    - 中介者
-    - 策略
-    - 观察者
+    - 组合 `Composite`
+    - 命令 `Command`
+    - 中介者 `Mediator`
+    - 策略 `Strategy`
+    - 观察者 `Observer`
