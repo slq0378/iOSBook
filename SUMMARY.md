@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [动画相关](dong_hua_xiang_guan.md)
    * [核心动画](he_xin_dong_hua.md)
-   * [01](01.md)
+   * [深入理解](shen_ru_li_jie.md)
 * [UIView相关](uiviewxiang_guan.md)
    * [UINavigationController](uinavigationcontroller.md)
    * [UIButton](uibutton.md)
