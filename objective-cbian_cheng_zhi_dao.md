@@ -5,6 +5,7 @@
 ## 设计模式起源
 - MVC模式在`Cocoa Touch`中使用很广泛。这个模式是一个混和设计模式，包含很多其他设计模式在里面。设计应用程序时一定要对一个对象或者类明确其在MVC中的角色。
 - `MVC(Model-View-Controller)`中每个角色负责不同的功能。
-    - Model 主要封装模型对象中的数据和基本行为。
-    - View 主要向用户展示信息。
-    - Controller 主要负责View和Model的沟通。
+    - `Model` 主要封装模型对象中的数据和基本行为。
+    - `View` 主要向用户展示信息。
+    - `Controller` 主要负责View和Model的沟通。
+- 所谓`MVC`混合模式
