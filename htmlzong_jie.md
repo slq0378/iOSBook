@@ -65,4 +65,15 @@
 </body>
 </html>
 ```
-## 
+## 图像
+- img标签指定一个要显示的图片，指定src和宽高就可以显示出来
+
+```html
+<html>
+<body>
+
+<img src="/images/w3cschool.png" width="300" height="120" />
+
+</body>
+</html>
+```
