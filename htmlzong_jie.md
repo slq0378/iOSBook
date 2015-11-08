@@ -52,3 +52,15 @@
 </body>
 </html>
 ```
+
+### 链接
+
+```html
+<html>
+<body>
+
+<a href="http://www.w3cschool.cc">这是一个链接</a>
+
+</body>
+</html>
+```
