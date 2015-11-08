@@ -19,4 +19,22 @@
 - 注意：DOCTYPE 声明了文档类型
 
 ### HTML 标题
-- HTML 标题（Heading）是通过<h1> - <h6> 标签来定义的.
+
+- HTML 标题（Heading）是通过<h1>  <h6> 标签来定义的.
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>这是标题 1</h1>
+<h2>这是标题 2</h2>
+<h3>这是标题 3</h3>
+<h4>这是标题 4</h4>
+<h5>这是标题 5</h5>
+<h6>这是标题 6</h6>
+
+</body>
+</html>
+			
+```
