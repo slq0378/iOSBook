@@ -440,7 +440,20 @@ $('btn').click(function(){
 
 ## HTML5基础知识总结
 
+```html
+<!DOCTYPE html>
+<html>
+<body>
 
+<h1>我的第一个标题</h1>
+	<h2>我的第二个标题</h2>
 
+<p>我的第一个段落。</p>
+
+</body>
+</html>
+```
+
+- 注意：DOCTYPE 声明了文档类型
 
 
