@@ -456,4 +456,5 @@ $('btn').click(function(){
 
 - 注意：DOCTYPE 声明了文档类型
 
-
+### HTML 标题
+- HTML 标题（Heading）是通过<h1> - <h6> 标签来定义的.
