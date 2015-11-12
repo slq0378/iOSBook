@@ -8,7 +8,7 @@
    * [UINavigationController](uinavigationcontroller.md)
    * [UIButton](uibutton.md)
    * [自定义scrollView](zi_ding_yi_scrollview.md)
-   * 控制器释放问题
+   * [控制器释放问题](kong_zhi_qi_shi_fang_wen_ti.md)
 * 多媒体相关
    * [后台播放音频](hou_tai_bo_fang_yin_pin.md)
    * [音频](yin_pin.md)
