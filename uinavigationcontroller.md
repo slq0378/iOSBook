@@ -29,6 +29,57 @@
 - 意思就是在通过A中创建B，然后把A pop，再通过导航控制器push B
 - 在O中通过代理监听B的创建时刻，将事件传递到O，在O中先pop，然后pushB
 
+- A/B
+
+```objc
+//
+//  ChatpanelViewController.m
+//  SLQScrollView
+//
+//  Created by Christian on 15/11/12.
+//  Copyright © 2015年 songlq. All rights reserved.
+//
+
+#import "ChatpanelViewController.h"
+#import "SLQScrollView.h"
+
+@implementation ChatpanelViewController
+
+- (void)dealloc
+{
+    NSLog(@"dealloc");
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
+    SLQScrollView *fatherView = [[SLQScrollView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 44)];
+    btn.backgroundColor = [UIColor grayColor];
+    [btn setTitle:@"点击" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    btn.tag = 100 + 1;
+//    btn.enabled = NO;
+//    btn.userInteractionEnabled = NO;
+    [fatherView addSubview:btn];
+    [self.view addSubview:fatherView];
+    
+}
+
+- (void)btnClick:(UIButton *)btn
+{
+    if ([self.delegate respondsToSelector:@selector(chatpanelViewControllerDidClickPushBtn:)]) {
+        ChatpanelViewController *newVC = [[ChatpanelViewController alloc] init];
+        [self.delegate chatpanelViewControllerDidClickPushBtn:newVC];
+    }
+}
+
+@end
+```
+
 ```objc
 //
 //  ViewController.m
