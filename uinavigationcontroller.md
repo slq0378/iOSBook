@@ -33,6 +33,34 @@
 
 ```objc
 //
+//  ChatpanelViewController.h
+//  SLQScrollView
+//
+//  Created by Christian on 15/11/12.
+//  Copyright © 2015年 songlq. All rights reserved.
+//
+
+#import "ViewController.h"
+
+@class ChatpanelViewController;
+@protocol ChatpanelViewControllerDelegate <NSObject>
+
+@optional
+- (void)chatpanelViewControllerDidClickPushBtn:(ChatpanelViewController *)newVc andPreviousVC:(ChatpanelViewController *)preVC;
+- (void)chatpanelViewControllerDidClickPushBtn:(ChatpanelViewController *)newVc;
+@end
+
+@interface ChatpanelViewController : ViewController
+/***/
+@property (nonatomic, weak) id<ChatpanelViewControllerDelegate> delegate;
+/**c*/
+
+@end
+
+
+
+
+//
 //  ChatpanelViewController.m
 //  SLQScrollView
 //
