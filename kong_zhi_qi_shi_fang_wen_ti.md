@@ -8,9 +8,10 @@
 
 - 当控制器中存在NSTimer时，就需要注意，因为当[NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];时，这个/target:self/ 就增加了VC的RetarnCountr, 如果你不将这个timer invalidate，就别想调用dealloc。需要在viewWillDisappear之前需要把控制器用到的NSTimer销毁。
 
-`[timer invalidate]; // 销毁timer`
-`timer = nil; // 置nil`
-
+```objc
+     [timer invalidate]; // 销毁timer
+     timer = nil; // 置nil
+```
 ## 控制器中的代理不是weak属性
 
 - `例如@property (nonatomic, weak) id<HCAppViewDelegate>` 
