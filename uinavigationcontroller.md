@@ -2,7 +2,7 @@
 
 - 设置背景图片
 
-```
+```objc
 #pragma mark - 设置导航栏默认背景
 - (void)setNavigationBarBackgroundImage
 {
