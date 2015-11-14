@@ -763,7 +763,7 @@ NSComparator chatbarPanelViewComparator = ^(id obj1, id obj2)
     else
     {
         [self presentFailureTips:NSLocalizedString(@"MESSAGE_NET_ERROR", @" 您的网络好像有点问题，请检查一下哦！")];
-    }
+    }s
 }
 
 - (void)dealEnterChatPanelFai:(NSNotification *)notif
