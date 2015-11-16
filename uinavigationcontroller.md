@@ -173,3 +173,13 @@
 
 @end
 ```
+
+##重构导航栈
+
+```objc
+NSMutableArray * viewControllers = [self.navigationController.viewControllers mutableCopy];
+[viewControllers removeLastObject];
+[viewControllers addObject:newController];
+
+[self.navigationController setViewControllers:viewControllers animated:YES];
+```
