@@ -14,7 +14,7 @@
 ```
 ## 控制器中的代理不是weak属性
 
-- `例如@property (nonatomic, weak) id<HCAppViewDelegate>` 
+- `例如@property (nonatomic, weak) id<SLQPopViewDelegate>` 
 - delegate;代理要使用弱引用，因为自定义控件是加载在视图控制器中的，视图控制器view对自定义控件是强引用，如果代理属性设置为strong，则意味着delegate对视图控制器也进行了强引用，会造成循环引用。导致控制器无法被释放，最终导致内存泄漏。
 
 ## 控制器中block的循环引用
