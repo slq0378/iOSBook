@@ -788,3 +788,11 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
 
 @end
 ```
+
+
+
+```objc
+ if ((rect.origin.x + _previousView.frame.size.width) < 0.0001  && (rect.origin.x + _previousView.frame.size.width) >≥ -0.0001) {
+        _previousView.frame = CGRectMake(_nextView.frame.origin.x, 100, ScreenWidth, 44);
+    }
+```
