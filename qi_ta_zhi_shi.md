@@ -81,7 +81,8 @@
 
 
 - 方法2
-```
+
+```objc
  // 喝杯茶休息一下吧！
     _numberOfSendMessagesInFiveSecond ++ ;
     if ( 1 == _numberOfSendMessagesInFiveSecond){
