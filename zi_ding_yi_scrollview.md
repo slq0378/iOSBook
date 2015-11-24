@@ -790,6 +790,7 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
 ```
 
 
+- <http://m.blog.csdn.net/blog/shengyumojian/24852309>
 
 ```objc
  - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
