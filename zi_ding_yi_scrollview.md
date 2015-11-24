@@ -792,7 +792,13 @@ typedef NS_ENUM(NSUInteger, ChatbarScrollViewButtonType) {
 
 
 ```objc
- if ((rect.origin.x + _previousView.frame.size.width) < 0.0001  && (rect.origin.x + _previousView.frame.size.width) >≥ -0.0001) {
-        _previousView.frame = CGRectMake(_nextView.frame.origin.x, 100, ScreenWidth, 44);
+ - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    CGRect rc = [self convertRect:[self.layer.presentationLayer frame] toView:self.superview];
+    rc.origin.x = - rc.origin.x;
+    if (CGRectContainsPoint(rc, point)) {
+        NSLog(@"hit btn");
     }
+    return [super hitTest:point withEvent:event];
+}
 ```
