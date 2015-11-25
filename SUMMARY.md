@@ -11,6 +11,7 @@
    * [控制器释放问题](kong_zhi_qi_shi_fang_wen_ti.md)
    * [连续点击问题](lian_xu_dian_ji_wen_ti.md)
    * [小问题总结](xiao_wen_ti_zong_jie.md)
+   * 广播循环滚动
 * 多媒体相关
    * [后台播放音频](hou_tai_bo_fang_yin_pin.md)
    * [音频](yin_pin.md)
