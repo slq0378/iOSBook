@@ -37,3 +37,62 @@
 }
 ```
 
+- 另外一种方式
+
+```objc
+@interface P2PSendMsgFrequencyStrategy ()
+{
+    NSInteger _iMaxCount;
+    long long _iMaxMillisecond; //1秒
+    NSInteger _iCount;
+    NSTimeInterval _lastSendTime;
+}
+
+@end
+
+@implementation P2PSendMsgFrequencyStrategy
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        _iMaxCount = 8;
+        _iMaxMillisecond = 1*1000; //1秒
+        _iCount = 0;
+        _lastSendTime = 0;
+    }
+    return self;
+}
+
+- (BOOL)sendMessageTooOften
+{//规则是：5秒内发送超过8条就不能发送，然后再过5秒才能发送。
+    NSTimeInterval nowSendTime = [[NSDate date]timeIntervalSince1970]*1000;
+
+    long long time = (nowSendTime - _lastSendTime);
+    if ((time > _iMaxMillisecond*5 && _iCount < _iMaxCount)
+        || (time > _iMaxMillisecond*10 && _iCount >= _iMaxCount)
+        )
+    {
+        _lastSendTime = [[NSDate date]timeIntervalSince1970]*1000;
+        _iCount = 0;
+
+        YJLog(@"sendMessage time:%lld", time);
+        return NO;
+    }
+    else
+    {
+        if (++_iCount < _iMaxCount)
+        {
+            YJLog(@"sendMessage count: %ld, time:%lld",  (long)_iCount, time);
+            return NO;
+        }
+
+    }
+
+    YJLog(@"sendMessage Too Many: %ld, time:%lld",  (long)_iCount, time);
+    return YES;
+}
+
+@end
+```
