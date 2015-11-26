@@ -69,6 +69,7 @@
 * 读书笔记
    * [Objective-C编程之道](objective-cbian_cheng_zhi_dao.md)
    * [功利与权谋](gong_li_yu_quan_mou.md)
+   * 重构_改善既有代码的设计
 * [工作记录](gong_zuo_ji_lu.md)
    * [iAround](iaround.md)
 
