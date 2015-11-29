@@ -85,7 +85,7 @@
     }
 }
 
-/// 定时器1≥≥
+/// 定时器1
 - (void)scrollView1
 {
     NSInteger count = _scrollView.subviews.count;
