@@ -37,7 +37,7 @@
 
 - 广播改动
 
-/// 手动
+/// 手动释放定时器
 - (void)removeAllTimers
 {
     [_scrollTimer1 invalidate];
