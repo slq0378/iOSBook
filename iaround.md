@@ -36,7 +36,8 @@
 
 
 - 广播改动
-- 
+
+/// 手动
 - (void)removeAllTimers
 {
     [_scrollTimer1 invalidate];
