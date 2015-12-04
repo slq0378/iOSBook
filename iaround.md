@@ -94,3 +94,50 @@
 
     }
 }
+
+- 获取当前系统语言
+
+```objc
+//获取当前语言
++ (NSInteger)getCurrentLanguage
+{
+	NSInteger lang = 1;//english
+	NSString *currentLanuage=[[NSLocale preferredLanguages] objectAtIndex:0];
+	if ([currentLanuage isEqualToString:@"zh-Hans"]
+        || [currentLanuage isEqualToString:@"zh-Hans-CN"])
+    {
+		lang = 2;//简体中文
+	}
+    else if([currentLanuage isEqualToString:@"zh-Hant"]
+            || [currentLanuage isEqualToString:@"zh-Hant-CN"]
+            || [currentLanuage isEqualToString:@"zh-HK"]
+            || [currentLanuage isEqualToString:@"zh-TW"])
+    {
+		lang = 3;//繁体中文
+	}
+    
+	return lang;
+}
+
++ (NSString *)getCurrentLanguageName
+{
+	NSString *lang = @"en";
+	NSString *currentLanuage=[[NSLocale preferredLanguages] objectAtIndex:0];
+	if ([currentLanuage isEqualToString:@"zh-Hans"]
+        || [currentLanuage isEqualToString:@"zh-Hans-CN"])
+    {
+		lang = @"hans";//简体中文
+	}
+    else if([currentLanuage isEqualToString:@"zh-Hant"]
+             || [currentLanuage isEqualToString:@"zh-Hant-CN"]
+             || [currentLanuage isEqualToString:@"zh-HK"]
+             || [currentLanuage isEqualToString:@"zh-TW"])
+    {
+		lang = @"hant";//繁体中文
+	}
+
+	return lang;
+}
+
+```
+
