@@ -66,6 +66,7 @@
    * [svn冲突解决](svnchong_tu_jie_jue.md)
    * [pragma使用](pragmashi_yong.md)
    * [Debug Symbol](debug_symbol.md)
+   * 快捷键
 * 读书笔记
    * [Objective-C编程之道](objective-cbian_cheng_zhi_dao.md)
    * [功利与权谋](gong_li_yu_quan_mou.md)
