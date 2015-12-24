@@ -16,3 +16,4 @@
 - `Extract Method`
 - `Pull Up Method`
 - `Form Template Method`
+- `Substitute Algorithm`
