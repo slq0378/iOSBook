@@ -15,4 +15,4 @@
 ## 专用名词
 - `Extract Method`
 - `Pull Up Method`
-- 
+- `Form Template Method`
