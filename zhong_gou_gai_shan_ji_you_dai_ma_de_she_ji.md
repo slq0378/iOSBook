@@ -5,12 +5,70 @@
 - 添加新功能时，就只添加新功能，不要重构，而重构时，不要添加新功能，只改变程序结构。
 
 ## 代码的问题
-- 1、`Duplicated Code`
+- `Duplicated Code`
     - 一个类中不同函数的的实现代码相同，那么要将这个函数代码抽离出一个单独的函数
     - 不同类中某两个方法代码重复，抽离到父类当中
     - 两个不相干的类中重复代码，对其中一个使用`Extract Method` 抽出一个独立类，然后在另一个类中使用这个独立类。
-- 2、
-- 
+- `Long Method`
+	- 问题：函数过长 
+	- 解决：分解函数，但是函数名一定要见名知意。最好做到，不用看函数实现就知道函数做了神马。
+- `Large Class`
+	- 问题：类中功能太多，成员变量太多
+	- 解决：可以将一些功能抽离到单独的类中,将类似函数抽离出一个函数来。
+- `Long Parameter list`
+	- 问题：参数列表过长 
+	- 解决：`Replace Method with Method Object` 、`Introduce Parameter Object` 、`Preserve Whole Object` 将参数列表换成对象，封装起来 
+- `Divergent Change`
+	- 问题：一个类受多种变化的影响	 
+	- 解决：`Extract Class` 针对某一外界变化的所有相应修改，都只应该发生在单一类中，而这个新类中的所有内容都应该反映此变化。
+- `Shotgun Surgery`
+	- 问题：一个类的修改，引起多个类的修改
+	- 解决：`Move Method`和`Move Field` 把所有需要修改的代码放进同一个类中。 如果没有，就新建一个`Inlin Class`来解决。
+- `Feature Envy`
+	- 问题：一个类中函数过渡依赖于另一个类的数据。 
+	- 解决：`Extract Method` 、`Move Method` 、`Move Field`等方式来解决这些依赖。
+- `Data Clumps`
+	- 数据泥团，数据喜欢扎堆
+	- `Extract Class` 、`Introduce Parameter Object`等减少字段和参数个数
+- `Primitive Obsession`
+	- 问题：基本类型偏执
+	- 解决：- `Replace Data Value with Object` 、`Replace Type Code with Class` 即便是很简单的几个数据，也可以封装成对象。
+- `Switch Statements`
+	- 问题：switch语句
+	- 解决：尝试用多态替换switch语句 
+- `Parallel Inheritance Hierarchies`
+	- 问题：一个继承体系类名称前缀和另一个继承体系的类名称前缀完全相同
+	- 解决：让一个继承体系的实例引用 另一个继承体系的实例。然后可以`Move Method`和`Move Field` 。
+- `Lazy Class`
+	- 问题:冗余类
+	- 解决: `Collapse Hierarchy` 或 `Inline Class`
+- `Speculative Generality`
+	- 问题：所谓的将来可能用到的某些变量、功能、函数等
+	- 解决：`Collapse Hierarchy` 或 `Inline Class`来除掉那些不必要代码。
+- `Message Chains`
+	- 问题：过渡耦合的消息链	 
+	- 解决：`Hide Delegate`方式
+- `Middle Man`
+	- 问题：中间人，类之间使用过多委托
+	- 解决：`Remove Middle Man`来避免过渡委托 
+- `Inappropriate Intimacy`
+	- 问题：亲密关系（两个类之间），
+	- 解决： `Change Bidirectional Association to Unidirectional` `Replace Inheritance with Delegation` 等方法类分离类
+- `Alternative Classes with Different Interface`
+	- 问题：相似类（功能相同的类或者函数）
+	- 解决：`Rename Method` `Move Method` `Extract Superclass` 等方式来去除重复代码
+- `Incomplete Library Class`
+	- 问题：不完美的库类（库的修改）
+	- 解决：`Introduce Foreign Method` `Introduce Local Extension`来扩展库类
+- `Data Class`
+	- 纯粹的数据类，封装注意事项 `Encapsulate Collection`
+- `Refused Bequest`
+	- 子类不想拥有父类的函数和数据，那么就新建一个兄弟类来实现。`Push Down Field` `Push Down Method`
+- `Comments`
+	- 问题：过多的注释
+	- 解决：当你感觉需要添加注释时，请先尝试重构，试着让所有注释变得多余。
+	 
+
 
 
 ## 专用名词
