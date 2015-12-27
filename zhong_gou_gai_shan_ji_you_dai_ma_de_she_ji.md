@@ -18,4 +18,35 @@
 - `Pull Up Method`
 - `Form Template Method`
 - `Substitute Algorithm`
-- ``
+- `Replace Temp with Query` 消除临时变量
+- `Introduce Parameter Object` 精简参数列表
+- `Preserve Whole Object` 精简参数列表
+- `Replace Method with Method Object` 继续精简参数列表和临时变量
+- `Decompose Conditional` 处理条件表达式
+- `Extract Subclass`
+- `Extract Interface`
+- `Duplicate Observed Data`
+- `Replace Parameter with Method` 
+- `Inlin Class` 内部类
+- `Replace Data Value with Object`
+- `Replace Type Code with Class`
+- `Replace Type Code with Subclass`
+- `Replace Type Code with State/Strategy`
+- `Replace Array with Object`
+- `Replace Conditional with Polymorphism`
+- `Replace Parameter with Explicit Methods` 
+- `Introduce Null Object`
+- `Collapse Hierarchy`
+- `Remove Parameter`
+- `Rename Method`
+- `Hide Delegate`
+- `Remove Middle Man`
+- `Replace Delegation with Inheritance`
+- `Change Bidirectional Association to Unidirectional` 
+- `Replace Inheritance with Delegation`
+- `Encapsulate Collection`
+- `Encapsulate Field`
+- `Push Down Method`
+- `Push Down Field`
+- `Introduce Assertion`
+- 
