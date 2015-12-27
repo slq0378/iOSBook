@@ -72,9 +72,6 @@
 ## 二、测试体系 
 
 
-
-
-
 ## 专用名词
 - `Extract Method`
 - `Pull Up Method`
