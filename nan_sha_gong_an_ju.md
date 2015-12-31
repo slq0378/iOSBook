@@ -79,11 +79,12 @@ typedef void (^failedBlock)(NSError *error);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failed(error);
     }];
-
+    
 
     
 }
 @end
+
 ```
 
 ## AFNetworking 使用出错(2.6以后版本)
