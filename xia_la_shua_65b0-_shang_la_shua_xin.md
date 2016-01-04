@@ -1,6 +1,6 @@
 # 下拉刷新-上拉刷新
 
-- tableView的上拉和下拉刷新可以通过
+- tableView的上拉和下拉刷新可以通过scrollViewDidScroll实现
 
 ```objc
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
