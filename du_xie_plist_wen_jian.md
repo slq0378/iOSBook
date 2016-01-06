@@ -8,7 +8,7 @@
 
 ```objc
     // 读取56个民族
-    NSString filePath = [[NSBundle mainBundle] pathForResource:@"nation.plist" ofType:nil];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"nation.plist" ofType:nil];
     NSDictionary *dict2 = [NSDictionary dictionaryWithContentsOfFile:filePath];
     
     NSArray *paths=NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES);
