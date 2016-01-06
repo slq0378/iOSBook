@@ -7,3 +7,5 @@
     - `__bridge_retainded` 引用计数加1，但是释放还得要源对象
     - `__bridge_transfer` 传递引用计数，使用ARC管理内存
 - GCD(Grand Central Dispatch)
+    - 串行 - 并行队列
+    - 同步 - 异步任务
