@@ -11,13 +11,14 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"nation.plist" ofType:nil];
     NSDictionary *dict2 = [NSDictionary dictionaryWithContentsOfFile:filePath];
     
+    // 拼接路径
     NSArray *paths=NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES);
     NSString *plistPath1 = [paths objectAtIndex:0];
     NSString *filename = [plistPath1 stringByAppendingPathComponent:@"nation2.plist"];
 
     NSMutableArray *mutab = [NSMutableArray array];
     
-    for (int i = 5 ; i < 26; i ++) {
+    for (int i = 0 ; i < 26; i ++) {
         char x = 65 + i;
         NSString *str=  [[NSString alloc] initWithCString:&x length:1];
         NSArray *arr = dict2[str];
