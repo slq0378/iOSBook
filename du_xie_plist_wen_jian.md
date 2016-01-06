@@ -25,6 +25,7 @@
             [mutab addObject:arr[j]];
         }
     }
+    // 保存成数组
     [mutab writeToFile:filename atomically:NO];
     NSLog(@"%@",mutab);
 ```
