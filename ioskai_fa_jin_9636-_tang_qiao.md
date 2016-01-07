@@ -9,3 +9,8 @@
 - GCD(Grand Central Dispatch)
     - 串行 - 并行队列
     - 同步 - 异步任务
+- UIWindow
+    - `makeKeyAndVisible` 
+    - UIWindow 创建后会自动添加在屏幕上，只需设置其属性Hidden为NO就可显示
+    - 常用于登陆界面，锁定界面，以及启动页等
+- 动态下载系统的多种字体
