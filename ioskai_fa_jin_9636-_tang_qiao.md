@@ -17,5 +17,5 @@
     - 下载系统支持的中文字体到系统中，然后再使用
     - 具体参考苹果官网的demo
 - 图文混排
-    - `CoreText` 
-    - `MGTemplateEngine` `GRMustache` 
+    - `CoreText`  原生，复杂
+    - `MGTemplateEngine` `GRMustache`  第三方
