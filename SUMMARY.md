@@ -44,7 +44,7 @@
    * [定时器](ding_shi_qi.md)
    * [自定义PopListView](zi_ding_yi_poplistview.md)
    * [下拉刷新-上拉刷新](xia_la_shua_65b0-_shang_la_shua_xin.md)
-   * 打开摄像机和相册
+   * [打开摄像机和相册](da_kai_she_xiang_ji_he_xiang_ce.md)
 * 网络和多线程
    * [网络](wang_luo.md)
    * [多线程](duo_xian_cheng.md)
