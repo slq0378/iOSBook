@@ -7,21 +7,6 @@
         UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"更换头像" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"从手机照片库选择",@"拍照", nil];
         [sheet showInView:self.view];
     }
-//    if (indexPath.row==3) {
-//        
-//        /**
-//         弹出二维码
-//         *aurhor:suhengxian
-//         */
-//        QRCodeView *qrView=[[QRCodeView alloc] initWithQRCodeViewStyle:QRCodeViewPerSon with:self];
-//        [qrView show];
-//    }
-}
-
-        /**
-         退出登录
-         *aurhor:suhengxian
-         */
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
