@@ -1,6 +1,7 @@
 # 自定义cell的分割线
-
-- 绘制kong的UIView
+- 在自定义cell的类中重写`drawRect:`
+ 
+- 绘制空的UIView
 
 ```objc
 - (void)drawRect:(CGRect)rect
