@@ -12,7 +12,7 @@
    * [连续点击问题](lian_xu_dian_ji_wen_ti.md)
    * [小问题总结](xiao_wen_ti_zong_jie.md)
    * [广播循环滚动](guang_bo_xun_huan_gun_dong.md)
-* 多媒体相关
+* [多媒体相关](duo_mei_ti_xiang_guan.md)
    * [后台播放音频](hou_tai_bo_fang_yin_pin.md)
    * [音频](yin_pin.md)
    * 图片旋转问题
