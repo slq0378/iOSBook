@@ -1,6 +1,9 @@
 # 多媒体相关
 
-- 添加UIImage的分类
+- 参考这篇文章
+- <http://feihu.me/blog/2015/how-to-handle-image-orientation-on-iOS/>
+- 解决方法：添加UIImage的分类
+
 
 ```objc
 #import <UIKit/UIKit.h>
