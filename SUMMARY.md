@@ -15,7 +15,7 @@
 * [多媒体相关](duo_mei_ti_xiang_guan.md)
    * [后台播放音频](hou_tai_bo_fang_yin_pin.md)
    * [音频](yin_pin.md)
-   * 图片旋转问题
+   * [图片旋转问题](tu_pian_xuan_zhuan_wen_ti.md)
 * [UI](ui.md)
    * [介绍](jie_shao.md)
    * [自定义按钮](zi_ding_yi_an_niu.md)
