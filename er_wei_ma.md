@@ -151,6 +151,19 @@
 ```
 
 - 全部源代码
+- 控制器 
+
+
+```objc
+
+#import <UIKit/UIKit.h>
+typedef void(^returnQrcodeBlock)(NSString *code);
+@interface SLQQrcodeViewController : UIViewController
+@property (nonatomic ,copy)returnQrcodeBlock qrcodeBlock;
+@end
+
+
+```
 
 ```objc
 //
@@ -352,8 +365,7 @@ static const char *kScanQRCodeQueueName = "ScanQRCodeQueue";
 @end
 ```
 
-```objc
-```
+
 
 
 # 内存分析
