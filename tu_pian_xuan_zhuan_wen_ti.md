@@ -1,5 +1,5 @@
 # 图片旋转问题
-- 
+- ios 拍照
 
 ```objc
 - (UIImage *)fixOrientation {
