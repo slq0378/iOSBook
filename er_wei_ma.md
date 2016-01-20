@@ -79,6 +79,7 @@
     - 4、添加扫描图层 `AVCaptureVideoPreviewLayer`
     - 5、开始扫描 `startRunning`
     - 6、实现回调代理方法，获取扫描结果 `captureOutput: :`
+    - 有一点需要注意，就是敏感区域设置的坐标系是反转的，也就是说xy互换，wh互换。
 
 ```objc
 #import "ViewController.h"
