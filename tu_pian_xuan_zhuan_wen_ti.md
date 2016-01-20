@@ -1,6 +1,7 @@
 # 图片旋转问题
 - ios 照片旋转问题
 - <http://feihu.me/blog/2015/how-to-handle-image-orientation-on-iOS>
+- 添加一个分类在上传之前进行处理即可
 
 ```objc
 - (UIImage *)fixOrientation {
