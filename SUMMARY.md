@@ -75,7 +75,7 @@
    * [读写plist文件](du_xie_plist_wen_jian.md)
    * [抓取崩溃信息](zhua_qu_beng_kui_xin_xi.md)
    * [获取系统版本、型号等信息](huo_qu_xi_tong_ban_ben_3001_xing_hao_deng_xin_xi.md)
-   * 推送通知
+   * [推送通知](tui_song_tong_zhi.md)
 * 读书笔记
    * [Objective-C编程之道](objective-cbian_cheng_zhi_dao.md)
    * [功利与权谋](gong_li_yu_quan_mou.md)
