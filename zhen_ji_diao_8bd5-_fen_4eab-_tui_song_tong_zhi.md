@@ -548,12 +548,12 @@ if (userInfo) {
     NSString *localToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"deviceToken"];
     if (![localToken isEqualToString:receiveToken]) {
         [[NSUserDefaults standardUserDefaults] setObject:receiveToken forKey:@"deviceToken"];
-        // 发送网络请求
-        [CommenDefault uploadDeviceToken:receiveToken];
     }
     NSLog(@"%@",receiveToken);
 }
 ```
+
+- 在合适的时间，比如登陆成功后上传至自己的服务器
 
 - 第三方apns
 	- JPush
