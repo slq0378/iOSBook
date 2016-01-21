@@ -536,6 +536,25 @@ if (userInfo) {
 }
 ```
 
+- deviceToken 转换字符串
+
+```objc
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSLog(@"%@",deviceToken.description);
+    NSString *receiveToken = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    receiveToken = [receiveToken stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    NSString *localToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"deviceToken"];
+    if (![localToken isEqualToString:receiveToken]) {
+        [[NSUserDefaults standardUserDefaults] setObject:receiveToken forKey:@"deviceToken"];
+        // 发送网络请求
+        [CommenDefault uploadDeviceToken:receiveToken];
+    }
+    NSLog(@"%@",receiveToken);
+}
+```
+
 - 第三方apns
 	- JPush
 	- <https://www.jpush.cn>
