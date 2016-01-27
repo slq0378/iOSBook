@@ -77,7 +77,7 @@
    * [获取系统版本、型号等信息](huo_qu_xi_tong_ban_ben_3001_xing_hao_deng_xin_xi.md)
    * [推送通知](tui_song_tong_zhi.md)
    * [证书打包发布](zheng_shu_da_bao_fa_bu.md)
-   * 闪退bug修复
+   * [闪退bug修复](shan_tui_bug_xiu_fu.md)
 * 读书笔记
    * [Objective-C编程之道](objective-cbian_cheng_zhi_dao.md)
    * [功利与权谋](gong_li_yu_quan_mou.md)
