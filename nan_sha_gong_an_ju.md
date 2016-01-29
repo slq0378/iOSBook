@@ -1,6 +1,9 @@
 # 南沙公安局
 
+http://www.umeng.com/
 
+naihaijingwu@163.com
+naihaijingwu123
 ## AFNetworking简单封装
 
 ```objc
