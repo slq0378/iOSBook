@@ -17,7 +17,7 @@
 
 - 指定颜色生成图片
 
-```OBJC
+```objc
 //指定颜色生成图片：
 + (UIImage *)imageWithColor:(UIColor *)color
 {
