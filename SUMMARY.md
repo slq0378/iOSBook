@@ -79,6 +79,7 @@
    * [推送通知](tui_song_tong_zhi.md)
    * [证书打包发布](zheng_shu_da_bao_fa_bu.md)
    * [闪退bug修复](shan_tui_bug_xiu_fu.md)
+   * 升级安装和卸载安装
 * 读书笔记
    * [Objective-C编程之道](objective-cbian_cheng_zhi_dao.md)
    * [功利与权谋](gong_li_yu_quan_mou.md)
