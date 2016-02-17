@@ -17,3 +17,8 @@
 
 - 2. EXC_BAD_ACCESS意味着你的程序在内存管理方面有bug。与SIGABRT不同，发生EXC_BAD_ACCESS错误时，在控制台里你不会得到一个错误的信息，但是你可以通过一些设置得到这些错误信息并进一步定位内存错误发生的位置。
 - 3. EXC_BAD_ACCESS意味着你的程序在内存管理方面有bug。与SIGABRT不同，发生EXC_BAD_ACCESS错误时，在控制台里你不会得到一个错误的信息，但是你可以通过一些设置得到这些错误信息并进一步定位内存错误发生的位置。
+- 
+- 
+## 错误
+- `Error: CUICatalog: Invalid asset name supplied: (null), or invalid scale factor : 2.000000`
+- 
