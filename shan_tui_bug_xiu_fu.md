@@ -21,4 +21,4 @@
 - 
 ## 错误
 - `Error: CUICatalog: Invalid asset name supplied: (null), or invalid scale factor : 2.000000`
-- 
+- <http://stackoverflow.com/questions/22011106/error-cuicatalog-invalid-asset-name-supplied-null-or-invalid-scale-factor>
