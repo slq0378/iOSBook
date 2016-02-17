@@ -23,6 +23,8 @@
 - `Error: CUICatalog: Invalid asset name supplied: (null), or invalid scale factor : 2.000000`
 - <http://stackoverflow.com/questions/22011106/error-cuicatalog-invalid-asset-name-supplied-null-or-invalid-scale-factor>
 - 处理方式
-    This one appears when someone is trying to put nil eventually in [UIImage imageNamed:]
-    Add symbolic breakpoint for [UIImage imageNamed:]
-    
+    - This one appears when someone is trying to put nil eventually in `[UIImage imageNamed:]`
+    - Add symbolic breakpoint for `[UIImage imageNamed:]`
+     ![](/images/error001.png)  
+    - Add $arg3 == nil condition (on Simulator) or $r0 == nil condition on iPhone device
+    - Run your application and see where is the problem persist
