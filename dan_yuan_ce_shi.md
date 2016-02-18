@@ -31,6 +31,23 @@
 }];
 }
 ```
+
+- 测试某个方法的性能
+
+```
+- (void)testPerformanceExample {
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        // Put the code you want to measure the time of here.
+        for(NSInteger i = 0 ; i < 10000;i ++) {
+            NSLog(@"1111");
+        }
+    }];
+}
+```
+
+
+
 - 常用断言
 
 ```objc
