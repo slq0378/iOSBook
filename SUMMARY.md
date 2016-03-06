@@ -16,7 +16,7 @@
    * [后台播放音频](hou_tai_bo_fang_yin_pin.md)
    * [音频](yin_pin.md)
    * [图片旋转问题](tu_pian_xuan_zhuan_wen_ti.md)
-   * 图片合成（长图）
+   * [图片合成（长图）](tu_pian_he_cheng_ff08_chang_tu_ff09.md)
 * [UI](ui.md)
    * [介绍](jie_shao.md)
    * [自定义按钮](zi_ding_yi_an_niu.md)
