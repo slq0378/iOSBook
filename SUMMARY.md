@@ -89,7 +89,7 @@
    * [重构_改善既有代码的设计](zhong_gou_gai_shan_ji_you_dai_ma_de_she_ji.md)
    * [iOS开发进阶-唐巧](ioskai_fa_jin_9636-_tang_qiao.md)
    * [Effective Objective-C 2.0](effective_objective-c_20.md)
-   * 数学之美
+   * [数学之美](shu_xue_zhi_mei.md)
 * [工作记录](gong_zuo_ji_lu.md)
    * [iAround](iaround.md)
    * [南沙公安局](nan_sha_gong_an_ju.md)
