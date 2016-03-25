@@ -35,3 +35,15 @@
 }
 
 ```
+
+```objc
+//截图
+- (UIImage *)grabScreenWithShotView:(UIView *)shotView
+{
+    UIGraphicsBeginImageContextWithOptions(shotView.bounds.size, NO, [UIScreen mainScreen].scale);
+    [shotView drawViewHierarchyInRect:shotView.bounds afterScreenUpdates:YES];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+}
+```
