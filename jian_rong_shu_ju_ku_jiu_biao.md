@@ -4,7 +4,7 @@
 - 在版本1.6，1.7时使用了表T_xsxr，在版本1.8时使用了表名相同，结构不同的表，导致兼容性问题。
 - 一些历史数据显示有问题，新数据插入表失败，
 
-- 解决方式，在版本1.9新建一个表
+
 
 ```
 CREATE TABLE IF NOT EXISTS "T_xsxr" (
@@ -40,6 +40,28 @@ CREATE TABLE IF NOT EXISTS "T_xsxr" (
 "isUpload" text
 );//1.8
 ```
+
+
+- 解决方式，在版本1.9新建一个表,判断旧表是否存在，并且判断是旧表1，还是旧表2，分别读取旧表数据插入到新表然后删除旧表。
+
+```objc
+CREATE TABLE IF NOT EXISTS "T_jwbb" (
+"keyid" text,
+"typename" text,
+"leadername" text,
+"peoplenumber" text,
+"remark" text,
+"reportname" text,
+"reportdeptname" text,
+"reporttime" text,
+"reportaddress" text,
+"longitude" text,
+"latitude" text,
+"filephotos" text,
+"isUpload" text
+);1.9
+```
+
 
 ```objc
 /// 兼容旧表
