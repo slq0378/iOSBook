@@ -6,7 +6,7 @@
 
 
 
-```
+```objc
 CREATE TABLE IF NOT EXISTS "T_xsxr" (
 "keyid" text,
 "prType" text,
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS "T_jwbb" (
 "latitude" text,
 "filephotos" text,
 "isUpload" text
-);1.9
+);//1.9
 ```
 
 
