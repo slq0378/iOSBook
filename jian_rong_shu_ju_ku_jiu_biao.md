@@ -4,8 +4,6 @@
 - 在版本1.6，1.7时使用了表T_xsxr，在版本1.8时使用了表名相同，结构不同的表，导致兼容性问题。
 - 一些历史数据显示有问题，新数据插入表失败，
 
-
-
 ```objc
 CREATE TABLE IF NOT EXISTS "T_xsxr" (
 "keyid" text,
