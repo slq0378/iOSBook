@@ -83,6 +83,7 @@
    * [升级安装和卸载安装](sheng_ji_an_zhuang_he_xie_zai_an_zhuang.md)
    * [大杂烩](da_za_hui.md)
    * [单元测试](dan_yuan_ce_shi.md)
+   * 兼容数据库旧表
 * 读书笔记
    * [Objective-C编程之道](objective-cbian_cheng_zhi_dao.md)
    * [功利与权谋](gong_li_yu_quan_mou.md)
