@@ -94,11 +94,11 @@
    * [Effective Objective-C 2.0](effective_objective-c_20.md)
    * [数学之美](shu_xue_zhi_mei.md)
    * [这么慢，那么美](zhe_yao_man_ff0c_na_yao_mei.md)
-* [工作记录](gong_zuo_ji_lu.md)
-   * [iAround](iaround.md)
-   * [南沙公安局](nan_sha_gong_an_ju.md)
 * Swift
    * [聊吧](liao_ba.md)
    * [Swift 和 OC混合开发](swift_he_oc_hun_he_kai_fa.md)
+* [工作记录](gong_zuo_ji_lu.md)
+   * [iAround](iaround.md)
+   * [南沙公安局](nan_sha_gong_an_ju.md)
 * [Python学习](pythonxue_xi.md)
 
