@@ -90,3 +90,17 @@ id hahaha(id self,SEL _cmd){
 
 @end
 ```
+
+
+## 调用
+
+```objc
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    SLQAutoDictionary *dict = [SLQAutoDictionary new];
+    dict.string = @"test";
+    NSLog(@"%@",dict.string);
+    
+}
+```
