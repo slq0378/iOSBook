@@ -2,13 +2,13 @@
 
 
 
-- 理解消息转发机制
-	- 如果对象接收到未知的方法，会把这个方法转交给备用接收者，会调用方法`forwaringTargetorSelector:`如果这个方法还不能处理，就会进行完整的消息转发。
-	- 消息转发机制分为两个步骤
-	   - 第一、是在本类进行动态方法解析，会调用`+(BOOL)resolveInstanceMethod:(SEL)selector`或`+(BOOL)resolveClassMethod:(SEL)selector` ，其中`selector`就是那个位置的方法，可以在这里加入自己的处理逻辑，防止程序崩溃
-	   - 第二、本类还有一次机会自己处理这个未知的方法，第一步没有效果的话，运行时会询问类是否进行消息转发`-(id)forwaringTargetorSelector:(SEL)selector`，`selector`表示未知的选择子，如果找到就返回新的接收对象，否则返回nil
-	   - 第三，开启完整的消息转发，首先创建`NSInvocation`对象，把`selector`相关的信息包括接收者，方法名，和参数。这一步会调用`-(void)forwardInvocation:(NSInvocation) invocation `方法，然后逐层寻找，直到`NSObject`，如果还是没有，就调用`doesNotRecognizeSelector:`并抛出异常。
-	- 可以在编写自己的类时，在消息转发过程中挂钩，用于执行预定的逻辑，而不是让程序崩溃掉。
+## 理解消息转发机制
+- 如果对象接收到未知的方法，会把这个方法转交给备用接收者，会调用方法`forwaringTargetorSelector:`如果这个方法还不能处理，就会进行完整的消息转发。
+- 消息转发机制分为两个步骤
+  - 第一、是在本类进行动态方法解析，会调用`+(BOOL)resolveInstanceMethod:(SEL)selector`或`+(BOOL)resolveClassMethod:(SEL)selector` ，其中`selector`就是那个位置的方法，可以在这里加入自己的处理逻辑，防止程序崩溃
+  - 第二、本类还有一次机会自己处理这个未知的方法，第一步没有效果的话，运行时会询问类是否进行消息转发`-(id)forwaringTargetorSelector:(SEL)selector`，`selector`表示未知的选择子，如果找到就返回新的接收对象，否则返回nil
+  - 第三，开启完整的消息转发，首先创建`NSInvocation`对象，把`selector`相关的信息包括接收者，方法名，和参数。这一步会调用`-(void)forwardInvocation:(NSInvocation) invocation `方法，然后逐层寻找，直到`NSObject`，如果还是没有，就调用`doesNotRecognizeSelector:`并抛出异常。
+- 可以在编写自己的类时，在消息转发过程中挂钩，用于执行预定的逻辑，而不是让程序崩溃掉。
 
 ## 自定义一个类
 
