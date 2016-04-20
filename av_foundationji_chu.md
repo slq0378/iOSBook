@@ -128,6 +128,59 @@
         [_synthesizer speakUtterance:utterance];
     }
 }
+
+- (IBAction)play:(id)sender {
+    if (_currentIndex == 0) {
+        [self beginConversation:_currentIndex];
+    }else {
+        [_synthesizer continueSpeaking];
+    }
+}
+- (IBAction)stop:(id)sender {
+    _currentIndex = 0;
+
+    [_synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+}
+- (IBAction)pause:(id)sender {
+
+    [_synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+}
+- (IBAction)previous:(id)sender {
+    _currentIndex -= 2;
+    if (_currentIndex <= 0) {
+        _currentIndex = 0;
+    }else if(_currentIndex >= _speechStrings.count) {
+        _currentIndex = _speechStrings.count;
+    }
+    [_synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    [self beginConversation:_currentIndex];
+}
+- (IBAction)next:(id)sender {
+    if (_currentIndex <= 0) {
+        _currentIndex = 0;
+    }else if(_currentIndex >= _speechStrings.count) {
+        _currentIndex = _speechStrings.count;
+    }
+    
+    [_synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    [self beginConversation:_currentIndex];
+}
+
+#pragma mark - 懒加载
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didStartSpeechUtterance:(AVSpeechUtterance *)utterance {
+    _currentIndex ++;
+    
+    if (_currentIndex <= 0) {
+        _currentIndex = 0;
+    }else if(_currentIndex >= _speechStrings.count) {
+        _currentIndex = _speechStrings.count;
+    }
+    self.currentLabel.text = [NSString stringWithFormat:@"%zd",_currentIndex];
+}
+- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance {
+    
+}
+
 ```
 
 
