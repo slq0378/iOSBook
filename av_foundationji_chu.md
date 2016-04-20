@@ -85,3 +85,36 @@
 @property (nonatomic, copy) NSArray *speechStrings;
 @end
 ```
+
+- 实现文件
+
+
+
+```objc
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    //1 创建AVSpeechSynthesizer对象
+    _synthesizer = [[AVSpeechSynthesizer alloc] init];
+    // 查看支持的语音体系
+    NSLog(@"%@",[AVSpeechSynthesisVoice speechVoices]);
+    _voices =
+    @[
+       [AVSpeechSynthesisVoice voiceWithLanguage:@"zh-CN"]
+       ];
+//    _speechStrings = @[@"hello world",@"你好",@"what is your name",@"怎么样 AV Foundation",@"哈哈哈哈哈"];
+    [self read];
+    NSLog(@"%@",_speechStrings);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self beginConversation];
+    });
+}
+// 从本地读取文件
+- (void)read {
+    _speechStrings = [[NSString stringWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"test" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil] componentsSeparatedByString:@"\n"];
+}
+
+```
+
+
+
