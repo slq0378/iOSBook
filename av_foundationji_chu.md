@@ -70,6 +70,18 @@
     
 ### 代码示例
 
-```objc
+- 头文件
 
+```objc
+#import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
+
+@interface ViewController ()
+/**语音播放对象*/
+@property (nonatomic, strong) AVSpeechSynthesizer *synthesizer;
+/**语音支持类型数组*/
+@property (nonatomic, copy) NSArray *voices;
+/// 播放的文字数组
+@property (nonatomic, copy) NSArray *speechStrings;
+@end
 ```
