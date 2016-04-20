@@ -40,3 +40,6 @@ http://fuckingclosuresyntax.com
   - `array.sort({ [unowned self] (item1: Int, item2: Int) -> Bool in return item1 < item2 })`
 - 作为函数参数带默认捕获而且推断参数类型和返回值类型:
   - `array.sort({ [unowned self] in return item1 < item2 })`
+
+
+### 传递点击事件
