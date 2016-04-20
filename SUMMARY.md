@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * AV Foundation
 * [动画相关](dong_hua_xiang_guan.md)
    * [核心动画](he_xin_dong_hua.md)
    * [深入理解](shen_ru_li_jie.md)
@@ -104,5 +103,6 @@
 * [工作记录](gong_zuo_ji_lu.md)
    * [iAround](iaround.md)
    * [南沙公安局](nan_sha_gong_an_ju.md)
+* AV Foundation
 * [Python学习](pythonxue_xi.md)
 
