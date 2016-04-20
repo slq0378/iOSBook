@@ -11,16 +11,13 @@ http://fuckingclosuresyntax.com
  
 
  
-
+## 闭包使用
 - 作为变量:
   - `var 闭包名称: (参数类型) -> (返回类型)`
- 
 - 作为可选的变量:
   - `var closureName: ((parameterTypes) -> (returnType))?`
-
 - 作为类型别名:
   - `typealias closureType = (parameterTypes) -> (returnType)`
-
 - 作为常量:
   - `let closureName: closureType = { ... }`
 - 作为调用函数时候的参数:
