@@ -113,7 +113,21 @@
 - (void)read {
     _speechStrings = [[NSString stringWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"test" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil] componentsSeparatedByString:@"\n"];
 }
-
+// 开始播放
+- (void)beginConversation {
+    for (NSInteger i = 0;  i < self.speechStrings.count; i ++) {
+        AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:self.speechStrings[i]];
+        // 播放语音类型
+        utterance.voice = self.voices[0];
+        // 播放速率
+        utterance.rate = 0.4f;
+        // 音调改变
+        utterance.pitchMultiplier= 0.8f;
+        // 播放下一条暂停一下
+        utterance.postUtteranceDelay = 0.1f;
+        [_synthesizer speakUtterance:utterance];
+    }
+}
 ```
 
 
