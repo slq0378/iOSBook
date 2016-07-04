@@ -174,7 +174,7 @@
 @end
 ```
 
-##重构导航栈
+## 重构导航栈
 
 ```objc
 NSMutableArray * viewControllers = [self.navigationController.viewControllers mutableCopy];
